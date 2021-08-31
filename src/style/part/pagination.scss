@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    width: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-gray;
+  }
+  a {
+    width: 4rem;
+    color: $color-blue;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  a:hover {
+    color: $color-lightblue;
+  }
+
+  a.active {
+    color: $color-gray;
+  }
+  &__prev,
+  &__next {
+    width: auto;
+    position: relative;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+  &__prev {
+    margin-right: 1rem;
+    left: 0;
+
+    &:hover {
+      left: -0.5rem;
+    }
+  }
+  &__next {
+    margin-left: 1rem;
+    right: 0;
+
+    &:hover {
+      right: -0.5rem;
+    }
+  }
+}
