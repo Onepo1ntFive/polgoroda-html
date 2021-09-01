@@ -1,0 +1,12 @@
+.content {
+  margin-bottom: 5rem;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
