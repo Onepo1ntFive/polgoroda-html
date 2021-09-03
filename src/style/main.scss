@@ -1,5 +1,4 @@
-// @import "./libs/nouislider.scss";
-// @import "./libs/swiper.scss";
+@import "./libs/swiper.scss";
 
 @import "./part/_var.scss";
 @import "./part/_reset.scss";
@@ -11,6 +10,7 @@
 @import "./part/header.scss";
 @import "./part/footer.scss";
 
+@import "./part/swiper-slider.scss";
 @import "./part/breadcrumbs.scss";
 @import "./part/pagination.scss";
 @import "./part/more-btn.scss";
@@ -18,3 +18,4 @@
 @import "./part/content.scss";
 @import "./part/catalog.scss";
 @import "./part/news.scss";
+@import "./part/news-detail.scss";

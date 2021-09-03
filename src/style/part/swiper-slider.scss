@@ -1,0 +1,108 @@
+.swiper-container-gallery {
+  margin-bottom: 6rem;
+  overflow: visible;
+
+  .swiper-slide {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+
+    img {
+      max-width: 100%;
+    }
+    
+    &-active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  .swiper-pagination {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: absolute;
+    top: calc(100% + 3rem);
+    width: 100%;
+    left: 0;
+
+    .swiper-pagination-bullet {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      position: relative;
+      width: 4rem;
+      height: 0.2rem;
+      background-color: $color-lightgray2;
+      transition: background-color 0.2s ease-in-out;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -2rem;
+        bottom: -2rem;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      &-active,
+      &:hover {
+        background-color: $color-lightblue;
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin-top: -1.5rem;
+    border-radius: 100rem;
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: 50% 50% no-repeat $color-blue;
+    transition: background 0.2s ease-in-out;
+    z-index: 1;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-top: -2.5rem;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: $color-lightblue;
+  }
+
+  .swiper-button-prev {
+    left: -1.5rem;
+    background-image: url('../img/chevron-left.svg');
+    
+    @media (min-width: $breakpoint-desktop) {
+      left: -2.5rem;
+    }
+  }
+
+  .swiper-button-next {
+    right: -1.5rem;
+    background-image: url('../img/chevron-right.svg');
+    
+    @media (min-width: $breakpoint-desktop) {
+      right: -2.5rem;
+    }
+  }
+}
+//
+.swiper-container-single {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
