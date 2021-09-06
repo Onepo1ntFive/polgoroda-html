@@ -1,0 +1,99 @@
+.swiper-container-carousel {
+  margin-bottom: 6rem;
+  overflow: visible;
+
+  @media (min-width: $breakpoint-tablet) {
+    .swiper-slide {
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      pointer-events: none;
+
+      img {
+        max-width: 100%;
+      }
+
+      &-visible {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+  .swiper-scrollbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(120% + 1rem);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: $color-lightgray2;
+    height: 0.2rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+  .swiper-scrollbar-drag {
+    height: 0.2rem;
+    background-color: $color-blue;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-lightblue;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -2rem;
+      bottom: -2rem;
+      width: 100%;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+      margin-top: -1.5rem;
+      border-radius: 100rem;
+      position: absolute;
+      top: 50%;
+      width: 3rem;
+      height: 3rem;
+      background: 50% 50% no-repeat $color-blue;
+      transition: background 0.2s ease-in-out;
+      z-index: 1;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      margin-top: -2.5rem;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: $color-lightblue;
+  }
+
+  .swiper-button-prev {
+    left: -1.5rem;
+    background-image: url('../img/chevron-left.svg');
+
+    @media (min-width: $breakpoint-desktop) {
+      left: -2.5rem;
+    }
+  }
+
+  .swiper-button-next {
+    right: -1.5rem;
+    background-image: url('../img/chevron-right.svg');
+
+    @media (min-width: $breakpoint-desktop) {
+      right: -2.5rem;
+    }
+  }
+}

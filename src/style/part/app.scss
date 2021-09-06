@@ -103,19 +103,33 @@ a:hover {
 .b-button,
 a.b-button,
 button.b-button {
-    padding: 1.5rem 3rem;
-    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 100rem;
     display: block;
-    background: $color-red;
     opacity: 1;
-    text-transform: uppercase;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: $color-white;
-    transition: opacity 0.2s ease-in-out;
+    max-width: 100%;
+    transition-property: opacity, backgrpund, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
 
     &:hover {
         opacity: 0.8;
+    }
+
+    &--blue {
+        background-color: $color-blue;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-lightblue;
+        }
+    }
+    &--wide {
+        width: 100%;
+        text-align: center;
     }
 }
 /*----------*/

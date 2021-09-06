@@ -1,5 +1,6 @@
 .catalog {
   .catalog__pic {
+    position: relative;
     margin-bottom: 1.5rem;
 
     picture {
@@ -7,7 +8,7 @@
       overflow: hidden;
     }
     img {
-      max-width: 100%;
+      width: 100%;
       transform: scale(1);
       transition: transform 0.4s ease-in-out;
     }
@@ -80,7 +81,6 @@
     flex-flow: row wrap;
   }
   .catalog__item {
-    margin-bottom: 4rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     width: 100%;
@@ -99,7 +99,7 @@
   }
   .catalog__pic {
     width: 100%;
-    
+
     @media (min-width: $breakpoint-tablet) {
       margin-bottom: 0;
       width: 12rem;
@@ -107,10 +107,56 @@
   }
   .catalog__content {
     width: 100%;
-    
+
     @media (min-width: $breakpoint-tablet) {
       padding-left: 1.5rem;
       width: calc(100% - 12rem);
     }
+  }
+}
+// mod
+.catalog--carousel {
+  .catalog__carousel {
+    max-width: 80%;
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 100%;
+    }
+  }
+  .catalog__overlay {
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-flow: column wrap;
+    pointer-events: none;
+    opacity: 0;
+    background-color: $color-white-80a;
+    font-size: 1.6rem;
+    transition: opacity 0.2s ease-in-out;
+
+    .catalog__btn {
+      margin-top: auto;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        color: $color-lightgray3;
+
+        span, ins {
+          color: $color-font;
+        }
+      }
+    }
+  }
+  .catalog__item:hover .catalog__overlay {
+    opacity: 1;
+    pointer-events: all;
   }
 }
