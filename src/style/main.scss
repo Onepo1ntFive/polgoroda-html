@@ -1,14 +1,17 @@
-@import "./libs/swiper.scss";
-
 @import "./part/_var.scss";
 @import "./part/_reset.scss";
 @import "./part/_fonts.scss";
+
+@import "./libs/swiper.scss";
+@import "./libs/tabs.scss";
 
 @import "./part/app.scss";
 @import "./part/layout.scss";
 
 @import "./part/header.scss";
 @import "./part/footer.scss";
+
+@import "./part/form.scss";
 
 @import "./part/swiper-slider.scss";
 @import "./part/swiper-carousel.scss";
@@ -18,5 +21,6 @@
 @import "./part/filter.scss";
 @import "./part/content.scss";
 @import "./part/catalog.scss";
+@import "./part/catalog-detail-gallery.scss";
 @import "./part/news.scss";
 @import "./part/news-detail.scss";

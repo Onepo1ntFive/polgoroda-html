@@ -1,0 +1,45 @@
+.form {
+  &__items {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+  }
+  &__item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+
+    &--half {
+      width: 50%;
+    }
+  }
+  label {
+    padding-bottom: 1rem;
+    display: block;
+    color: $color-gray;
+    line-height: 1.2;
+    font-size: 1.4rem;
+  }
+  input:not([type='checkbox']),
+  input:not([type='radio']),
+  select,
+  textarea {
+    padding: 1.2rem 2.4rem;
+    width: 100%;
+    border-radius: 100rem;
+    border: 0;
+    background: $color-lightgray;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  input[type='number'] {
+    text-align: center;
+    appearance: none;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+  }
+}

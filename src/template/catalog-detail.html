@@ -1,3 +1,65 @@
 <div class="catalog catalog--detail">
-  <pre>.catalog--detail</pre>
+  <div class="catalog__header">
+    <div class="catalog__header-title">
+      <h1>Паркетная доска Polarwood Дуб Ливинг High Gloss</h1>
+      <div class="catalog__id">Артикул: <ins>К049020</ins></div>
+    </div>
+    <picture>
+        <source srcset='./img/catalog-brand-pic.webp' type='image/webp'>
+        <source srcset='./img/catalog-brand-pic.jpg' type='image/jpeg'>
+        <img src='./img/catalog-brand-pic.jpg' alt=''>
+    </picture>
+  </div>
+  <div class="catalog__product">
+    <div class="catalog__gallery">
+      //= ./catalog-detail-gallery.html
+    </div>
+    <div class="catalog__specs">
+      <ul>
+        <li><span>Производитель</span><ins>Karelia</ins></li>
+        <li><span>Коллекция</span><ins>С фаской</ins></li>
+        <li><span>Страна</span><ins>Италия</ins></li>
+        <li><span>Порода дерева</span><ins>Дуб</ins></li>
+        <li><span>Количество полос</span><ins>Трехполосный</ins></li>
+        <li><span>Фаска</span><ins>С фаской</ins></li>
+        <li><span>Замковая система Замок</span><ins>Замок</ins></li>
+      </ul>
+      <a class="js-scroll-to b-button b-button--clear b-button--big b-button--icon-arrow" data-target=".js-tabacc" href="#">Все xарактеристики</a>
+    </div>
+    <div class="catalog__card">
+      <div class="catalog__card-inner">
+        <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
+        <div class="catalog__price-package"> 8 299.94 руб./упаковка <span>(1 упаковка = 3.41 м<sup>2</sup>)</span>
+        </div>
+        <div class="catalog__form form">
+          <div class="form__items">
+            <div class="form__item form__item--half">
+              <label for="input-1">Площадь пола, м<sup>2</sup></label>
+              <input type="number" id="input-1" value="1">
+            </div>
+            <div class="form__item form__item--half">
+              <label for="input-2">Количество упаковок</label>
+              <input type="number" id="input-2" value="1">
+            </div>
+            <div class="form__item">
+              <label for="input-3">Количество упаковок</label>
+              <select id="input-3">
+                <option slected>Без запаса</option>
+                <option>10%</option>
+                <option>20%</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__total"> Итого: <ins>8 299.94 <span class="b-ruble-font">Р</span></ins>
+        </div>
+        <div class="catalog__btn">
+          <a class="b-button b-button--blue b-button--wide b-button--big" href="#">Добавить в корзину</a>
+          <a class="b-button b-button--clear b-button--wide b-button--big" href="#">Купить в 1 клик</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= ./catalog-tabs.html
 </div>
