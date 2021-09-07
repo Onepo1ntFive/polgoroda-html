@@ -94,6 +94,78 @@ Array.prototype.forEach.call(scrollToLinks, function (el, i) {
 });
 "use strict";
 
+/* SLIDE UP */
+var slideUp = function slideUp(target) {
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  target.style.transitionProperty = 'height, margin, padding';
+  target.style.transitionDuration = duration + 'ms';
+  target.style.boxSizing = 'border-box';
+  target.style.height = target.offsetHeight + 'px';
+  target.offsetHeight;
+  target.style.overflow = 'hidden';
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  window.setTimeout(function () {
+    target.style.display = 'none';
+    target.style.removeProperty('height');
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    target.style.removeProperty('overflow');
+    target.style.removeProperty('transition-duration');
+    target.style.removeProperty('transition-property'); //alert("!");
+  }, duration);
+};
+/* SLIDE DOWN */
+
+
+var slideDown = function slideDown(target) {
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  target.style.removeProperty('display');
+  var display = window.getComputedStyle(target).display;
+  if (display === 'none') display = 'block';
+  target.style.display = display;
+  var height = target.offsetHeight;
+  target.style.overflow = 'hidden';
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  target.offsetHeight;
+  target.style.boxSizing = 'border-box';
+  target.style.transitionProperty = "height, margin, padding";
+  target.style.transitionDuration = duration + 'ms';
+  target.style.height = height + 'px';
+  target.style.removeProperty('padding-top');
+  target.style.removeProperty('padding-bottom');
+  target.style.removeProperty('margin-top');
+  target.style.removeProperty('margin-bottom');
+  window.setTimeout(function () {
+    target.style.removeProperty('height');
+    target.style.removeProperty('overflow');
+    target.style.removeProperty('transition-duration');
+    target.style.removeProperty('transition-property');
+  }, duration);
+};
+/* TOOGLE */
+
+
+var slideToggle = function slideToggle(target) {
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+
+  if (window.getComputedStyle(target).display === 'none') {
+    return slideDown(target, duration);
+  } else {
+    return slideUp(target, duration);
+  }
+};
+"use strict";
+
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /**
@@ -9710,6 +9782,89 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   Swiper.use(components);
   return Swiper;
 });
+"use strict";
+
+(function () {
+  var tabTitleAll = document.querySelectorAll('.js-tabacc-title');
+  var tabContentAll = document.querySelectorAll('.js-tabacc-content');
+  var windowWidth = window.innerWidth;
+  Array.prototype.forEach.call(tabTitleAll, function (tabTitleClick, i) {
+    tabTitleClick.addEventListener('click', function () {
+      var tabId = tabTitleClick.dataset.tabid;
+      var tabTitleCurAll = document.querySelectorAll('[data-tabid=' + tabId + ']');
+      var tabContentCur = document.querySelector('[data-tabcontent=' + tabId + ']');
+      Array.prototype.forEach.call(tabTitleAll, function (tabTitleActive, i) {
+        tabTitleActive.classList.remove('active');
+        tabTitleActive.classList.remove('show');
+      });
+      Array.prototype.forEach.call(tabContentAll, function (tabContentActive, i) {
+        tabContentActive.classList.remove('active');
+        tabContentActive.classList.remove('show');
+      });
+      Array.prototype.forEach.call(tabTitleCurAll, function (tabTitleCur, i) {
+        tabTitleCur.classList.add('active');
+        tabTitleCur.classList.add('show');
+      });
+      tabContentCur.classList.add('active');
+      tabContentCur.classList.add('show');
+      windowWidth = window.innerWidth;
+
+      if (windowWidth >= 1200) {
+        Array.prototype.forEach.call(tabContentAll, function (tabContentShow, i) {
+          tabContentShow.style.display = 'none';
+        });
+        tabContentCur.style.display = 'block';
+      } else if (windowWidth < 1200) {
+        Array.prototype.forEach.call(tabContentAll, function (tabContentSlide, i) {
+          slideUp(tabContentSlide, 500);
+        });
+        setTimeout(function () {
+          slideDown(tabContentCur, 500);
+        }, 500);
+        var topPos = document.querySelector('.tabs-acc__items').offsetTop;
+        scrollIt(topPos, 1000, 'easeOutQuad');
+      }
+    });
+  });
+})();
+"use strict";
+
+(function () {
+  var galleryTop = new Swiper('.swiper-container--gallery', {
+    spaceBetween: 30,
+    loop: true,
+    loopedSlides: 4,
+    slidesPerView: 1
+  });
+  var galleryThumbs = new Swiper('.swiper-container--gallery-nav', {
+    spaceBetween: 10,
+    direction: 'vertical',
+    centeredSlides: true,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    loop: true,
+    loopedSlides: 4,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      0: {
+        direction: 'horizontal',
+        slidesPerView: 3
+      },
+      500: {
+        slidesPerView: 3
+      },
+      768: {
+        direction: 'vertical',
+        slidesPerView: 3
+      }
+    }
+  });
+  galleryTop.controller.control = galleryThumbs;
+  galleryThumbs.controller.control = galleryTop;
+})();
 "use strict";
 
 (function () {
