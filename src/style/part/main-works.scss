@@ -1,0 +1,255 @@
+.portfolio-block {
+  margin: 0 -100rem 7rem;
+  padding: 7rem 100rem;
+  background-color: $color-lightgray;
+
+  &__header {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  &__cols {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    @media (min-width: $breakpoint-desktop-extra) {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
+  }
+  &__col {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 50%;
+    }
+    @media (min-width: $breakpoint-desktop-extra) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 3rem;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      & .portfolio-block__col:not(.portfolio-block__col--wide) {
+        width: 50%;
+      }
+    }
+    @media (min-width: $breakpoint-desktop) {
+      & .portfolio-block__col:not(.portfolio-block__col--wide) {
+        width: 50%;
+      }
+    }
+
+    &--wide {
+      width: 100%;
+
+      .portfolio-block__item .portfolio-block__dot {
+        left: 2rem;
+        bottom: 2rem;
+
+        @media (min-width: $breakpoint-desktop-extra) {
+          left: 6rem;
+          bottom: 6rem;
+        }
+      }
+      .portfolio-block__item--right .portfolio-block__dot {
+        left: auto;
+        right: 2rem;
+        bottom: 2rem;
+
+        @media (min-width: $breakpoint-desktop-extra) {
+          right: 6rem;
+          bottom: 6rem;
+        }
+      }
+    }
+  }
+  &__content {
+    padding: 2rem;
+    background-color: $color-white;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: absolute;
+    left: -1rem;
+    bottom: calc(100% + 3rem);
+    width: 30rem;
+    box-shadow: 0px 2px 15px rgba(38, 50, 56, 0.1);
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition-property: opacity, bottom;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 35rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      width: 40rem;
+      left: -3rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 4rem;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: 26.5rem;
+      transform: rotate(360deg);
+      border: 10px solid transparent;
+      border-top-color: $color-white;
+
+      @media (min-width: $breakpoint-tablet) {
+        right: 31.5rem;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        right: 34.5rem;
+      }
+    }
+
+    picture {
+      padding-right: 1.5rem;
+    }
+    img {
+      width: 5rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: 10rem;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        width: 12rem;
+      }
+    }
+
+    & > div {
+      width: calc(100% - 5rem);
+      
+      @media (min-width: $breakpoint-tablet) {
+        width: calc(100% - 10rem);
+      }
+      @media (min-width: $breakpoint-desktop) {
+        width: calc(100% - 12rem);
+      }
+    }
+  }
+  &__dot {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    z-index: 2;
+
+    @media (min-width: $breakpoint-desktop-extra) {
+      left: 4rem;
+      bottom: 4rem;
+    }
+
+    & > span {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100rem;
+      background-color: $color-white;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        border-radius: 100rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 0.2rem;
+        width: 1.6rem;
+        background-color: $color-blue;
+        transform: translate(-0.8rem, -0.1rem);
+        transform-origin: 50% 50%;
+        transition: background-color 0.2s ease-in-out;
+      }
+      &::after {
+        transform: rotate(90deg) translate(-5%, 400%);
+      }
+    }
+    &:hover {
+      & > span {
+        &::before,
+        &::after {
+          background-color: $color-lightblue;
+        }
+      }
+      .portfolio-block__content {
+        bottom: calc(100% + 1.5rem);
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    picture {
+      display: block;
+    }
+    img {
+      max-width: 100%;
+    }
+
+    &--right {
+      .portfolio-block__dot {
+        left: auto;
+        right: 3rem;
+        bottom: 3rem;
+
+        @media (min-width: $breakpoint-desktop-extra) {
+          right: 2rem;
+          bottom: 2rem;
+        }
+      }
+      .portfolio-block__content {
+        left: auto;
+        right: -1rem;
+
+        @media (min-width: $breakpoint-desktop) {
+          right: -3rem;
+        }
+
+        &::before {
+          right: auto;
+          left: 26.5rem;
+
+          @media (min-width: $breakpoint-tablet) {
+            left: 31.5rem;
+          }
+          @media (min-width: $breakpoint-desktop) {
+            left: 34.5rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.brands {
+  margin-bottom: 7rem;
+  
+  &__items {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    @media (min-width: $breakpoint-tablet) {}
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
+  }
+  &__item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    width: calc(100% / 2);
+
+    @media (min-width: $breakpoint-tablet) {
+      width: calc(100% / 4);
+    }
+    @media (max-width: calc(#{$breakpoint-desktop} - 1px)) {
+      &:nth-child(8) ~ .brands__item {
+        display: none;
+      }
+    }
+    @media (min-width: $breakpoint-desktop) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 3rem;
+      width: calc(100% / 6);
+    }
+
+    a {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        picture {
+          background-color: $color-lightgray-50a;
+        }
+      }
+    }
+    picture {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      height: 10rem;
+      background-color: $color-lightgray;
+      transition: background 0.2s ease-in-out;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
