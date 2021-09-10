@@ -2835,6 +2835,9 @@ button.swiper-pagination-bullet {
     border-radius: 100rem;
     background-color: #f5f7f8;
     cursor: pointer; }
+    .swiper-container--gallery-nav .swiper-button-prev::after,
+    .swiper-container--gallery-nav .swiper-button-next::after {
+      display: none; }
     @media (min-width: 768px) {
       .swiper-container--gallery-nav .swiper-button-prev,
       .swiper-container--gallery-nav .swiper-button-next {
