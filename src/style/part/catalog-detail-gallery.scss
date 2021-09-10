@@ -97,6 +97,10 @@
     background-color: $color-lightgray;
     cursor: pointer;
 
+    &::after {
+      display: none;
+    }
+
     @media (min-width: $breakpoint-tablet) {
       margin-top: 0;
       margin-left: -1.5rem;
