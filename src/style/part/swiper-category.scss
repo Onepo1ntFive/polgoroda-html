@@ -36,6 +36,7 @@
     height: 0.2rem;
     background-color: $color-blue;
     transition: background 0.2s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       background-color: $color-lightblue;
@@ -54,6 +55,10 @@
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+    
+    &::after {
+      display: none;
+    }
 
     @media (min-width: $breakpoint-tablet) {
       display: block;

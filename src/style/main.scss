@@ -1,30 +1,31 @@
-@import "./part/_var.scss";
-@import "./part/_reset.scss";
-@import "./part/_fonts.scss";
+@import './part/_var.scss';
+@import './part/_reset.scss';
+@import './part/_fonts.scss';
 
-@import "./libs/swiper.scss";
-@import "./libs/tabs.scss";
+@import './part/app.scss';
+@import './part/layout.scss';
 
-@import "./part/app.scss";
-@import "./part/layout.scss";
+@import './libs/swiper.scss';
+@import './libs/tabs.scss';
 
-@import "./part/header.scss";
-@import "./part/footer.scss";
+@import './part/header.scss';
+@import './part/footer.scss';
 
-@import "./part/form.scss";
+@import './part/form.scss';
 
-@import "./part/swiper-slider.scss";
-@import "./part/swiper-carousel.scss";
-@import "./part/swiper-category.scss";
-@import "./part/breadcrumbs.scss";
-@import "./part/pagination.scss";
-@import "./part/more-btn.scss";
-@import "./part/filter.scss";
-@import "./part/content.scss";
-@import "./part/main-works.scss";
-@import "./part/main-brands.scss";
-@import "./part/category.scss";
-@import "./part/catalog.scss";
-@import "./part/catalog-detail-gallery.scss";
-@import "./part/news.scss";
-@import "./part/news-detail.scss";
+@import './part/swiper-slider.scss';
+@import './part/swiper-carousel.scss';
+@import './part/swiper-category.scss';
+@import './part/swiper-main.scss';
+@import './part/breadcrumbs.scss';
+@import './part/pagination.scss';
+@import './part/more-btn.scss';
+@import './part/filter.scss';
+@import './part/content.scss';
+@import './part/main-works.scss';
+@import './part/main-brands.scss';
+@import './part/category.scss';
+@import './part/catalog.scss';
+@import './part/catalog-detail-gallery.scss';
+@import './part/news.scss';
+@import './part/news-detail.scss';

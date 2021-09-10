@@ -10,7 +10,7 @@
     img {
       max-width: 100%;
     }
-    
+
     &-active {
       opacity: 1;
       pointer-events: all;
@@ -24,32 +24,33 @@
     top: calc(100% + 3rem);
     width: 100%;
     left: 0;
+  }
+  
+  .swiper-pagination-bullet {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0;
+    position: relative;
+    width: 4rem;
+    height: 0.2rem;
+    background-color: $color-lightgray2;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
 
-    .swiper-pagination-bullet {
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-      position: relative;
-      width: 4rem;
-      height: 0.2rem;
-      background-color: $color-lightgray2;
-      transition: background-color 0.2s ease-in-out;
-      cursor: pointer;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -2rem;
+      bottom: -2rem;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
 
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -2rem;
-        bottom: -2rem;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-      }
-
-      &-active,
-      &:hover {
-        background-color: $color-lightblue;
-      }
+    &-active,
+    &:hover {
+      background-color: $color-lightblue;
     }
   }
 
@@ -64,6 +65,10 @@
     background: 50% 50% no-repeat $color-blue;
     transition: background 0.2s ease-in-out;
     z-index: 1;
+
+    &::after {
+      display: none;
+    }
 
     @media (min-width: $breakpoint-desktop) {
       margin-top: -2.5rem;
@@ -80,7 +85,7 @@
   .swiper-button-prev {
     left: -1.5rem;
     background-image: url('../img/chevron-left.svg');
-    
+
     @media (min-width: $breakpoint-desktop) {
       left: -2.5rem;
     }
@@ -89,7 +94,7 @@
   .swiper-button-next {
     right: -1.5rem;
     background-image: url('../img/chevron-right.svg');
-    
+
     @media (min-width: $breakpoint-desktop) {
       right: -2.5rem;
     }

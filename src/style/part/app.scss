@@ -152,9 +152,15 @@ button.b-button {
 
     &:hover {
       color: $color-lightblue;
+    }
+  }
+  &--clear-dark {
+    padding-left: 0;
+    padding-right: 0;
+    color: $color-lightblue;
 
-      &::after {
-      }
+    &:hover {
+      color: $color-white;
     }
   }
   &--icon-arrow {
@@ -177,6 +183,29 @@ button.b-button {
       &::after {
         left: 0.5rem;
         background: url('../img/arrow-right-short-h.svg') 50% 50% no-repeat;
+      }
+    }
+  }
+  &--icon-arrow-dark {
+    &::after {
+      margin-left: 1rem;
+      position: relative;
+      left: 0;
+      margin-top: -0.3em;
+      content: '';
+      background: url('../img/arrow-right-short-h.svg') 50% 50% no-repeat;
+      display: inline-block;
+      width: 2.4rem;
+      height: 2.4rem;
+      vertical-align: middle;
+      transition-property: left, background;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
+    &:hover {
+      &::after {
+        left: 0.5rem;
+        background: url('../img/arrow-right-short-w.svg') 50% 50% no-repeat;
       }
     }
   }

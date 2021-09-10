@@ -1,0 +1,195 @@
+.slider {
+  margin-bottom: 21rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 26rem;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 7rem;
+  }
+
+  .slider__content {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    position: absolute;
+    height: 18rem;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, #003b6e 0%, rgba(0, 59, 110, 0.7) 91.8%);
+    color: #fff;
+    
+    @media (min-width: $breakpoint-tablet) {
+      padding: 3rem 4rem;
+      top: 100%;
+      height: 21rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 66rem;
+      top: auto;
+      right: 22.5rem;
+      bottom: 0;
+      height: auto;
+      right: 16rem;
+    }
+    @media (min-width: $breakpoint-desktop-extra) {
+      right: 22.5rem;
+    }
+
+    .slider__title {
+      font-weight: 600;
+      line-height: 1.2;
+      font-size: 2.8rem;
+      
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 3.8rem;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 5.2rem;
+      }
+    }
+    .slider__btn {
+      text-align: right;
+    }
+  }
+}
+/*--*/
+.swiper-container-main {
+  overflow: visible;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 21rem;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 0;
+  }
+
+  .swiper-slide {
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      min-height: 32rem;
+
+      @media (min-width: $breakpoint-desktop) {
+        min-height: 60rem;
+      }
+      @media (min-width: $breakpoint-desktop-extra) {
+        min-height: 70rem;
+      }
+    }
+  }
+  .swiper-pagination {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 3rem;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+    @media (min-width: $breakpoint-desktop) {
+      justify-content: flex-start;
+      left: 6rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      left: 11rem;
+    }
+
+    .swiper-pagination-bullet {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      width: 4rem;
+      height: 0.2rem;
+      border-radius: 0;
+      position: relative;
+      opacity: 0.5;
+      background-color: $color-white;
+      transition-property: background-color, opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -2rem;
+        bottom: -2rem;
+        left: 0;
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+      &-active {
+        opacity: 1;
+        background-color: $color-lightblue;
+      }
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    cursor: pointer;
+    display: block;
+    margin-top: -1.5rem;
+    border-radius: 100rem;
+    position: absolute;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    background: 50% 50% no-repeat $color-blue-a40;
+    transition: background 0.2s ease-in-out;
+    z-index: 1;
+
+    &::after {
+      display: none;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-top: -2.5rem;
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: $color-lightblue;
+  }
+
+  .swiper-button-prev {
+    left: 1rem;
+    background-image: url('../img/chevron-left-big.svg');
+    background-size: 20% auto;
+
+    @media (min-width: $breakpoint-desktop) {
+      background-size: auto;
+      left: 2rem;
+    }
+    @media (min-width: $breakpoint-desktop-extra) {
+      left: 6rem;
+    }
+  }
+
+  .swiper-button-next {
+    right: 1rem;
+    background-image: url('../img/chevron-right-big.svg');
+    background-size: 20% auto;
+
+    @media (min-width: $breakpoint-desktop) {
+      background-size: auto;
+      right: 2rem;
+    }
+    @media (min-width: $breakpoint-desktop-extra) {
+      right: 6rem;
+    }
+  }
+}
