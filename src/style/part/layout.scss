@@ -41,6 +41,51 @@
         max-width: 1700px;
         width: 100%;
     }
+    .content__cols {
+        margin-left: -3rem;
+        margin-right: -3rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        @media (min-width: $breakpoint-desktop) {
+            flex-wrap: nowrap;
+        }
+    }
+    .content__col {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        flex: 1 auto;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            &--w400 {
+                width: 40rem;
+                flex: 1 40em;
+            }
+        }
+    }
+}
+/*----------*/
+.card {
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background-color: $color-white;
+    box-shadow: 0px 2px 15px rgba(38, 50, 56, 0.1);
+    border-radius: 3px;
+
+    @media (min-width: $breakpoint-tablet) {
+        max-width: 45rem;
+        padding: 3rem 3rem 4rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        max-width: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
 }
 /*----------*/
 .l-footer {
