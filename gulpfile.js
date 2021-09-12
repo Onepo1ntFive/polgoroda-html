@@ -4,7 +4,7 @@ const gulp = require('gulp'),
     { series, parallel } = gulp,
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('node-sass')),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     webp = require('gulp-webp'),
@@ -131,12 +131,14 @@ exports.dev = series(
 
 // deploy
 const deploy = () => {
-    return gulp.src('./build/**/*')
-        .pipe(ghPages());
+    return gulp
+        .src('./build/**/*').pipe(ghPages())
 }
+
+('deploy', () => src('./dist/**/*').pipe(ghPages()));
 
 exports.deploy = series(
     cleanBuild,
     parallel(html, styles, scripts, fonts, imagesDev, imagesWebp),
-    parallel(deploy)
+    deploy
 );
