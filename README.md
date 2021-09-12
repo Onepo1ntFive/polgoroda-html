@@ -10,3 +10,4 @@
 - [News detail](https://onepo1ntfive.github.io/polgoroda-html/news-detail.html)
 - [Catalog](https://onepo1ntfive.github.io/polgoroda-html/catalog.html)
 - [Catalog detail](https://onepo1ntfive.github.io/polgoroda-html/catalog-detail.html)
+- [Samples](https://onepo1ntfive.github.io/polgoroda-html/sample.html)
