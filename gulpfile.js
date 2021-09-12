@@ -26,7 +26,8 @@ const path = {
         html: 'src/*.html',
         js: ['src/js/libs/**/*.js', 'src/js/**/*.js'],
         style: 'src/style/main.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/img/**/*.{png,gif,jpg}',
+        imgSVG: 'src/img/**/*.svg',
         fonts: 'src/fonts/**/*.*'
     },
     watch: { // типы файлов для наблюдения
@@ -36,11 +37,15 @@ const path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: './build'
+    clean: './build',
+    cleanImages: './build/img/**/*.*'
 }
 
 const cleanBuild = (cb) => {
     return rimraf(path.clean, cb);
+}
+const cleanImages = (cb) => {
+    return rimraf(path.cleanImages, cb);
 }
 
 // dev tasks
@@ -81,7 +86,7 @@ const scripts = () => {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('./maps'))
@@ -104,7 +109,7 @@ const imagesWebp = () => {
 
 const imagesDev = () => {
     return gulp
-        .src(path.src.img)
+        .src(path.src.imgSVG)
         .pipe(gulp.dest(path.build.img))
 }
 
@@ -115,7 +120,7 @@ const watch = () => {
 }
 
 // help tasks
-exports.imagesDev = series(imagesDev, imagesWebp);
+exports.images = series(cleanImages, parallel(imagesDev, imagesWebp));
 
 // dev task
 exports.dev = series(
