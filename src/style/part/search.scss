@@ -1,0 +1,125 @@
+.search {
+  padding: 2rem;
+  background-color: $color-white;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1000rem;
+    right: -1000rem;
+    bottom: -1000rem;
+    left: -1000rem;
+    z-index: -2;
+    background-color: $color-blue-a;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &__input {
+    padding-right: 2rem;
+    border-radius: 100rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color: $color-lightgray;
+
+    input {
+      padding: 1rem 2rem;
+      height: 5rem;
+      border: 0;
+      width: 100%;
+      background: none;
+    }
+  }
+
+  &__search {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__clear {
+    margin: 0 1rem;
+    padding: 0;
+    padding-right: 1rem;
+    border: 0;
+    border-right: 1px solid $color-gray2;
+    background: none;
+    pointer-events: none;
+    opacity: 0;
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__results {
+    margin: 0;
+    padding: 0 4rem 2rem;
+    background-color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition-property: opacity, top;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    li {
+      margin-bottom: 1em;
+
+      a {
+        color: $color-font;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $color-blue;
+        }
+      }
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+
+  // mod
+  &--active {
+    position: relative;
+
+    &::before {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .search__clear {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .search__results {
+      opacity: 1;
+      top: 100%;
+      pointer-events: all;
+    }
+  }
+}
