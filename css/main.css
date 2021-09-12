@@ -508,7 +508,7 @@ h3,
   @media (min-width: 768px) {
     h3,
     .h3 {
-      font-size: 1.8rem; } }
+      font-size: 2.4rem; } }
 
 h4,
 .h4 {
@@ -689,6 +689,42 @@ button.b-button {
     margin: auto;
     max-width: 1700px;
     width: 100%; }
+  .l-content .content__cols {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    display: flex;
+    flex-flow: row wrap; }
+    @media (min-width: 1200px) {
+      .l-content .content__cols {
+        flex-wrap: nowrap; } }
+  .l-content .content__col {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex: 1 auto;
+    width: 100%; }
+    @media (min-width: 1200px) {
+      .l-content .content__col--w400 {
+        width: 40rem;
+        flex: 1 40em; } }
+
+/*----------*/
+.card {
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 15px rgba(38, 50, 56, 0.1);
+  border-radius: 3px; }
+  @media (min-width: 768px) {
+    .card {
+      max-width: 45rem;
+      padding: 3rem 3rem 4rem; } }
+  @media (min-width: 1200px) {
+    .card {
+      max-width: none; } }
+  .card h1,
+  .card h2,
+  .card h3 {
+    text-align: center; }
 
 /*----------*/
 /*----------*/
@@ -1627,8 +1663,70 @@ button.swiper-pagination-bullet {
   padding-left: 1rem;
   padding-bottom: 2rem;
   width: 100%; }
+  .form__item:last-child {
+    padding-bottom: 0; }
   .form__item--half {
     width: 50%; }
+
+.form__samples {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .form__samples {
+      margin-left: -1rem;
+      margin-right: -1rem; } }
+  @media (min-width: 1200px) {
+    .form__samples {
+      justify-content: flex-start; } }
+
+.form__sample {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 2rem;
+  width: 20%; }
+  @media (min-width: 768px) {
+    .form__sample {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      width: 33.33%;
+      max-width: 7rem; } }
+  @media (min-width: 1200px) {
+    .form__sample {
+      max-width: none; } }
+  .form__sample img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    z-index: 1; }
+
+.form__sample-inner {
+  position: relative;
+  padding-bottom: 100%;
+  border: 1px solid #cfd8dc; }
+  .form__sample-inner::before, .form__sample-inner::after {
+    content: '';
+    display: block;
+    border-radius: 100rem;
+    background-color: #cfd8dc;
+    position: absolute;
+    width: 1.6rem;
+    height: 0.2rem;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transition: background-color 0.2s ease-in-out; }
+  .form__sample-inner::before {
+    transform: translate(-50%, -50%); }
+  .form__sample-inner::after {
+    transform: translate(-50%, -50%) rotate(90deg); }
+  .form__sample-inner:hover::before, .form__sample-inner:hover::after {
+    background-color: #003b6e; }
 
 .form label {
   padding-bottom: 1rem;
@@ -1655,6 +1753,14 @@ button.swiper-pagination-bullet {
   appearance: none;
   -moz-appearance: textfield;
   -webkit-appearance: none; }
+
+.form-policy {
+  text-align: center;
+  color: #8fa4ae;
+  font-size: 1.4rem;
+  line-height: 1.4; }
+  .form-policy a {
+    display: inline-block; }
 
 .swiper-container-gallery {
   margin-bottom: 6rem;
@@ -2483,6 +2589,80 @@ button.swiper-pagination-bullet {
   padding: 7rem 100rem;
   margin: 0 -100rem 7rem;
   background-color: #f5f7f8; }
+
+.sample .sample__items {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+  flex-flow: row wrap; }
+  @media (min-width: 1200px) {
+    .sample .sample__items {
+      margin-left: -2rem;
+      margin-right: -2rem; } }
+
+.sample .sample__item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+  position: relative;
+  width: calc(100% / 3); }
+  @media (min-width: 768px) {
+    .sample .sample__item {
+      width: calc(100% / 5); } }
+  @media (min-width: 1200px) {
+    .sample .sample__item {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 5rem;
+      width: calc(100% / 6); } }
+  .sample .sample__item input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none; }
+    .sample .sample__item input:checked ~ label::before,
+    .sample .sample__item input:checked ~ label::after {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%); }
+  .sample .sample__item label {
+    display: block;
+    position: relative;
+    cursor: pointer; }
+    .sample .sample__item label::before, .sample .sample__item label::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.1);
+      z-index: 1;
+      opacity: 0;
+      transition-property: transform, opacity;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out; }
+    .sample .sample__item label::after {
+      background: url("../img/icon-check.svg") 50% 50% no-repeat;
+      width: 2.4rem;
+      height: 2.4rem;
+      transition-delay: 0.1s; }
+    .sample .sample__item label::before {
+      width: 4rem;
+      height: 4rem;
+      background-color: #fff;
+      border-radius: 100rem; }
+  .sample .sample__item picture {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    display: block;
+    clip-path: polygon(8.3% 0%, 0% 8.3%, 8.3% 16.6%, 0% 24.9%, 8.3% 33.2%, 0% 41.5%, 8.3% 49.8%, 0% 58.1%, 8.3% 66.4%, 0% 74.7%, 8.3% 83%, 0% 91.3%, 8.3% 100%, 16.6% 91.7%, 24.9% 100%, 33.2% 91.7%, 41.5% 100%, 49.8% 91.7%, 58.1% 100%, 66.4% 91.7%, 74.7% 100%, 83% 91.7%, 91.3% 100%, 100% 91.3%, 91.7% 83%, 100% 74.7%, 91.7% 66.4%, 100% 58.1%, 91.7% 49.8%, 100% 41.5%, 91.7% 33.2%, 100% 24.9%, 91.7% 16.6%, 100% 8.3%, 91.3% 0%, 83% 8.3%, 74.7% 0%, 66.4% 8.3%, 58.1% 0%, 49.8% 8.3%, 41.5% 0%, 33.2% 8.3%, 24.9% 0%, 16.6% 8.3%); }
+  .sample .sample__item img {
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out; }
+  .sample .sample__item:hover img {
+    transform: scale(1.05); }
 
 .catalog .catalog__pic {
   position: relative;
