@@ -1,0 +1,146 @@
+body {
+  overflow: hidden;
+}
+// --
+.sidebar {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $color-white;
+
+  @media (min-width: $breakpoint-tablet) {
+    max-width: 38rem;
+  }
+
+  &__top {
+    padding: 0.5rem 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: none;
+    background-color: $color-blue;
+    font-size: 1.4rem;
+    color: $color-white;
+
+    a {
+      color: $color-white;
+    }
+  }
+  &__city {
+    font-weight: 600;
+  }
+  &__header {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    border-bottom: 1px solid $color-lightgray2;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__inner {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1 auto;
+  }
+}
+//
+.sidebar-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $color-blue-a;
+  z-index: 998;
+}
+// menu
+.sidebar__menu {
+  overflow: hidden;
+  margin-right: -100%;
+  padding-right: 100%;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+
+  &--active {
+    transform: translateX(-100%);
+  }
+
+  &-level-1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &--blue {
+      background-color: $color-blue;
+      color: $color-white;
+
+      .sidebar__menu-item-1 {
+        a {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  &-item-1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &:first-child .sidebar__menu-level-2 {
+      display: block;
+    }
+
+    span {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    ins {
+      width: 3rem;
+      height: 3rem;
+      background: url('../img/chevron-right-black.svg') 50% 50% no-repeat;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+    a {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: block;
+      font-weight: 600;
+      color: $color-font-dark;
+      flex: 1 auto;
+
+      &:hover {
+        color: $color-lightblue;
+      }
+    }
+  }
+  &-item-spacer {
+    font-weight: 600;
+  }
+  &-level-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+  }
+  &-item-2 {
+    a {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-weight: normal;
+    }
+  }
+}
