@@ -1,4 +1,4 @@
-body {
+.no-scroll {
   overflow: hidden;
 }
 // --
@@ -6,13 +6,18 @@ body {
   position: fixed;
   overflow: hidden;
   top: 0;
-  left: 0;
+  left: -150%;
   bottom: 0;
   z-index: 999;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   background-color: $color-white;
+  transition: left 0.3s ease-in-out;
+  
+  &.active {
+    left: 0;
+  }
 
   @media (min-width: $breakpoint-tablet) {
     max-width: 38rem;
@@ -33,7 +38,32 @@ body {
     }
   }
   &__city {
-    font-weight: 600;
+    margin-right: 3rem;
+
+    span {
+      display: inline;
+      position: relative;
+      margin-right: 2rem;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      transition: border-color 0.2s ease-in-out;
+
+      &:hover {
+        border-bottom-color: $color-white;
+      }
+
+      &::after {
+        content: '';
+        margin-left: 1rem;
+        position: absolute;
+        left: 100%;
+        top: calc(50% - 0.3rem);
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.6rem;
+        background: url('../img/icon-down.svg') 50% 50% no-repeat;
+      }
+    }
   }
   &__header {
     margin-left: 2rem;
@@ -101,6 +131,14 @@ body {
   left: 0;
   background: $color-blue-a;
   z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 // menu
 .sidebar__menu {
@@ -115,7 +153,7 @@ body {
     padding-bottom: 2rem;
     position: relative;
     transition-property: transform, height;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 
     &.active {

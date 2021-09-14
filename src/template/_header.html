@@ -4,8 +4,8 @@
       <div class="header__city">
         <span>Санкт-Петербург</span>
       </div>
-      <div class="header__support">Служба клиентской поддержки <a href="tel:88125668382">8 (812) 566-83-82</a></div>
-      <nav class="header__menu">
+      <div class="header__support"><span class="hide-on-mobile">Служба клиентской поддержки </span><a href="tel:88125668382">8 (812) 566-83-82</a></div>
+      <nav class="header__menu hide-on-mobile hide-on-tablet">
         <a href="#">Заказать образцы</a>
         <a href="#">Дизайнерам</a>
         <a href="#">Портфолио</a>
@@ -23,189 +23,18 @@
           <img src="./img/polgoroda-logo.svg" alt="">
         </a>
       </div>
-      <div class="header__catalog">
-        <span class="header__btn header__sandwich"><ins></ins> Каталог товаров</span>
+      <div class="header__catalog hide-on-mobile hide-on-tablet">
+        <span class="header__btn js-dropdown-show header__sandwich"><ins></ins> Каталог товаров</span>
       </div>
       <div class="header__search"> 
         //= ./search.html
       </div>
       <div class="header__btns">
-        <a href="#" class="header__btn"><img src="./img/icon-user.svg" alt="">Войти</a>
-        <a href="#" class="header__btn"><img src="./img/icon-shopping-cart.svg" alt="">Корзина</a>
-        <span class="header__btn header__sandwich"><ins></ins> Меню</span>
+        <a href="#" class="header__btn"><img src="./img/icon-user.svg" alt=""><span class="hide-on-mobile">Войти</span></a>
+        <a href="#" class="header__btn"><img src="./img/icon-shopping-cart.svg" alt=""><span class="hide-on-mobile">Корзина</span></a>
+        <span class="header__btn header__sandwich js-sidebar-show hide-on-desktop"><ins></ins> <span class="hide-on-mobile">Меню</span></span>
       </div>
-      <div class="header__dropdown header__dropdown--active js-dropdown-menu">
-        <nav class="header__dropdown-inner">
-          <div class="header__dropdown-item">
-            <picture class="header__dropdown-pic">
-              <source srcset='./img/menu-pic.webp' type='image/webp'>
-              <source srcset='./img/menu-pic.jpg' type='image/jpeg'>
-              <img src='./img/menu-pic.jpg' alt=''>
-            </picture>
-            <div class="header__dropdown-content">
-              <a href="#">Паркетная доска</a>
-              <ul>
-                <li><a href="#">Дуб</a></li>
-                <li><a href="#">Ясень</a></li>
-                <li><a href="#">Американский орех</a></li>
-                <li><a href="#">Лак</a></li>
-                <li><a href="#">Масло Однополосная</a></li>
-                <li><a href="#">Трехполосная</a></li>
-                <li><a href="#">С фаской</a></li>
-                <li><a href="#">Без фаски Натур</a></li>
-                <li><a href="#">Селект</a></li>
-                <li><a href="#">Рустик</a></li>
-                <li><a href="#">Кантри</a></li>
-                <li><a href="#">Новинка</a></li>
-                <li><a href="#">Хит</a></li>
-                <li><a href="#">Акция</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__dropdown-item">
-            <picture class="header__dropdown-pic">
-              <source srcset='./img/menu-pic.webp' type='image/webp'>
-              <source srcset='./img/menu-pic.jpg' type='image/jpeg'>
-              <img src='./img/menu-pic.jpg' alt=''>
-            </picture>
-            <div class="header__dropdown-content">
-              <a href="#">Ламинат</a>
-              <ul>
-                <li><a href="#">Дуб</a></li>
-                <li><a href="#">Ясень</a></li>
-                <li><a href="#">Американский орех</a></li>
-                <li><a href="#">Лак</a></li>
-                <li><a href="#">Масло Однополосная</a></li>
-                <li><a href="#">Трехполосная</a></li>
-                <li><a href="#">С фаской</a></li>
-                <li><a href="#">Без фаски Натур</a></li>
-                <li><a href="#">Селект</a></li>
-                <li><a href="#">Рустик</a></li>
-                <li><a href="#">Кантри</a></li>
-                <li><a href="#">Новинка</a></li>
-                <li><a href="#">Хит</a></li>
-                <li><a href="#">Акция</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__dropdown-item">
-            <picture class="header__dropdown-pic">
-              <source srcset='./img/menu-pic.webp' type='image/webp'>
-              <source srcset='./img/menu-pic.jpg' type='image/jpeg'>
-              <img src='./img/menu-pic.jpg' alt=''>
-            </picture>
-            <div class="header__dropdown-content">
-              <a href="#">Паркетная ёлка</a>
-              <ul>
-                <li><a href="#">Дуб</a></li>
-                <li><a href="#">Ясень</a></li>
-                <li><a href="#">Американский орех</a></li>
-                <li><a href="#">Лак</a></li>
-                <li><a href="#">Масло Однополосная</a></li>
-                <li><a href="#">Трехполосная</a></li>
-                <li><a href="#">С фаской</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__dropdown-item">
-            <picture class="header__dropdown-pic">
-              <source srcset='./img/menu-pic.webp' type='image/webp'>
-              <source srcset='./img/menu-pic.jpg' type='image/jpeg'>
-              <img src='./img/menu-pic.jpg' alt=''>
-            </picture>
-            <div class="header__dropdown-content">
-              <a href="#">Массивная доска</a>
-              <ul>
-                <li><a href="#">Дуб</a></li>
-                <li><a href="#">Ясень</a></li>
-                <li><a href="#">Американский орех</a></li>
-                <li><a href="#">Лак</a></li>
-                <li><a href="#">Масло Однополосная</a></li>
-                <li><a href="#">Трехполосная</a></li>
-                <li><a href="#">С фаской</a></li>
-                <li><a href="#">Без фаски Натур</a></li>
-                <li><a href="#">Селект</a></li>
-                <li><a href="#">Рустик</a></li>
-                <li><a href="#">Кантри</a></li>
-                <li><a href="#">Новинка</a></li>
-                <li><a href="#">Хит</a></li>
-                <li><a href="#">Акция</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__dropdown-item">
-            <picture class="header__dropdown-pic">
-              <source srcset='./img/menu-pic.webp' type='image/webp'>
-              <source srcset='./img/menu-pic.jpg' type='image/jpeg'>
-              <img src='./img/menu-pic.jpg' alt=''>
-            </picture>
-            <div class="header__dropdown-content">
-              <a href="#">Пробковые покрытия</a>
-              <ul>
-                <li><a href="#">Дуб</a></li>
-                <li><a href="#">Ясень</a></li>
-                <li><a href="#">Американский орех</a></li>
-                <li><a href="#">Лак</a></li>
-                <li><a href="#">Масло Однополосная</a></li>
-                <li><a href="#">Трехполосная</a></li>
-                <li><a href="#">С фаской</a></li>
-                <li><a href="#">Без фаски Натур</a></li>
-                <li><a href="#">Селект</a></li>
-                <li><a href="#">Рустик</a></li>
-                <li><a href="#">Кантри</a></li>
-                <li><a href="#">Новинка</a></li>
-                <li><a href="#">Хит</a></li>
-                <li><a href="#">Акция</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__dropdown-item">
-            <picture class="header__dropdown-pic">
-              <source srcset='./img/menu-pic.webp' type='image/webp'>
-              <source srcset='./img/menu-pic.jpg' type='image/jpeg'>
-              <img src='./img/menu-pic.jpg' alt=''>
-            </picture>
-            <div class="header__dropdown-content">
-              <a href="#">Кварцвиниловая плитка</a>
-              <ul>
-                <li><a href="#">Дуб</a></li>
-                <li><a href="#">Ясень</a></li>
-                <li><a href="#">Американский орех</a></li>
-                <li><a href="#">Лак</a></li>
-                <li><a href="#">Масло Однополосная</a></li>
-                <li><a href="#">Трехполосная</a></li>
-                <li><a href="#">С фаской</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__dropdown-item">
-            <picture class="header__dropdown-pic">
-              <source srcset='./img/menu-pic.webp' type='image/webp'>
-              <source srcset='./img/menu-pic.jpg' type='image/jpeg'>
-              <img src='./img/menu-pic.jpg' alt=''>
-            </picture>
-            <div class="header__dropdown-content">
-              <a href="#">Плинтус</a>
-              <ul>
-                <li><a href="#">Дуб</a></li>
-                <li><a href="#">Ясень</a></li>
-                <li><a href="#">Американский орех</a></li>
-                <li><a href="#">Лак</a></li>
-                <li><a href="#">Масло Однополосная</a></li>
-                <li><a href="#">Трехполосная</a></li>
-                <li><a href="#">С фаской</a></li>
-                <li><a href="#">Без фаски Натур</a></li>
-                <li><a href="#">Селект</a></li>
-                <li><a href="#">Рустик</a></li>
-                <li><a href="#">Кантри</a></li>
-                <li><a href="#">Новинка</a></li>
-                <li><a href="#">Хит</a></li>
-                <li><a href="#">Акция</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+      //= ./header-dropdown-menu.html
     </div>
   </div>
 </header>

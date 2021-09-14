@@ -14,6 +14,20 @@
 
   &__logo {
     margin-right: auto;
+    max-width: 40%;
+    @media (min-width: $breakpoint-mobile-extra) {
+      max-width: 50%;
+    }
+    @media (min-width: $breakpoint-tablet) {
+      max-width: none;
+    }
+
+    a {
+      display: block;
+    }
+    img {
+      max-width: 100%;
+    }
   }
 
   &__menu {
@@ -64,8 +78,13 @@
   }
 
   &__support {
-    margin-right: auto;
+    margin-left: auto;
     color: $color-white-50a;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 0;
+      margin-right: auto;
+    }
 
     a {
       margin-left: 0.5rem;
@@ -74,14 +93,28 @@
   }
 
   &__search {
-    margin-left: 3rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
     position: relative;
     z-index: 10;
     flex: 1 auto;
+    order: 1;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 0;
+      margin-left: 3rem;
+      order: 0;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
   }
 
   &__btn {
-    margin-left: 3rem;
+    margin-left: 1.5rem;
     position: relative;
     display: inline-block;
     font-weight: 600;
@@ -89,8 +122,15 @@
     cursor: pointer;
     transition: color 0.2s ease-in-out;
 
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 3rem;
+    }
+
     &:hover {
       color: $color-lightblue;
+    }
+
+    span {
     }
 
     img {
@@ -162,7 +202,7 @@
 
   &__dropdown {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -195,7 +235,7 @@
       background-color: $color-blue-a;
       z-index: -2;
     }
-    
+
     &-inner {
       margin: auto;
       padding-top: 4rem;
@@ -211,18 +251,17 @@
       width: 50%;
       display: flex;
       flex-flow: row nowrap;
-      
+
       @media (min-width: $breakpoint-desktop-extra) {
         width: 33.33%;
       }
-      
+
       ul {
         display: flex;
         flex-flow: row wrap;
       }
 
       li {
-
         &::after {
           content: '/';
           padding-left: 1rem;
@@ -270,22 +309,32 @@
           color: $color-lightblue;
         }
       }
-      // mod 
-      &--active {
-        opacity: 1;
-        top: 100%;
-        pointer-events: all;
-      }
+    }
+    // mod
+    &.active {
+      opacity: 1;
+      top: 100%;
+      pointer-events: all;
     }
   }
 
   // mod
   &--line {
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-bottom: 2rem;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
     background-color: $color-blue;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: $color-white;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 1.6rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
 
     a {
       color: $color-white;
