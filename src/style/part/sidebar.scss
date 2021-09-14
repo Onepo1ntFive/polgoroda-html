@@ -41,10 +41,50 @@ body {
     padding-top: 1.3rem;
     padding-bottom: 1.3rem;
     border-bottom: 1px solid $color-lightgray2;
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+  }
+  &__logo {
+    position: relative;
+    opacity: 0;
+    left: -2rem;
+    pointer-events: none;
+    transition-property: opacity, left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    
+    &.active {
+      pointer-events: all;
+      opacity: 1;
+      left: 0;
+    }
+  }
+  &__back-btn {
+    position: absolute;
+    opacity: 0;
+    left: 2rem;
+    pointer-events: none;
+    transition-property: opacity, left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    font-size: 1.6rem;
+    color: $color-lightgray3;
+    cursor: pointer;
+
+    img {
+      margin-top: -0.2em;
+      padding-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    &.active {
+      pointer-events: all;
+      opacity: 1;
+      left: 0;
+    }
   }
   &__inner {
     overflow-x: hidden;
@@ -65,19 +105,23 @@ body {
 // menu
 .sidebar__menu {
   overflow: hidden;
-  margin-right: -100%;
-  padding-right: 100%;
   position: relative;
-  transition: transform 0.2s ease-in-out;
-
-  &--active {
-    transform: translateX(-100%);
-  }
-
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 auto;
+  
   &-level-1 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    position: relative;
+    transition-property: transform, height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 
+    &.active {
+      transform: translateX(-100%);
+    }
+    
     &--blue {
       background-color: $color-blue;
       color: $color-white;
@@ -92,10 +136,6 @@ body {
   &-item-1 {
     padding-left: 2rem;
     padding-right: 2rem;
-
-    &:first-child .sidebar__menu-level-2 {
-      display: block;
-    }
 
     span {
       display: flex;
@@ -128,13 +168,19 @@ body {
     font-weight: 600;
   }
   &-level-2 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
     width: 100%;
     position: absolute;
     top: 0;
     left: 100%;
     display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+  &-item-spacer {
+    margin-bottom: 1rem;
   }
   &-item-2 {
     a {
