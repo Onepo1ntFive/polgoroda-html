@@ -25,9 +25,10 @@
                 slidesPerView: 3,
             },
             500: {
-                slidesPerView: 3,
+                direction: 'horizontal',
+                slidesPerView: 5,
             },
-            768: {
+            1200: {
                 direction: 'vertical',
                 slidesPerView: 3,
             }

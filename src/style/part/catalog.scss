@@ -239,13 +239,15 @@
     .catalog__specs {
       margin-bottom: 3rem;
       width: 100%;
-
+      order: 1;
+      
       @media (min-width: $breakpoint-tablet) {
         width: 70%;
       }
       @media (min-width: $breakpoint-desktop) {
         margin-bottom: 0;
         width: 26%;
+        order: 0;
       }
     }
     .catalog__card {
