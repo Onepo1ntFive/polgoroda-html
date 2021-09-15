@@ -1,8 +1,148 @@
 .filter {
+  padding: 2rem;
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0 0 3rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    .filter__items {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .filter__item {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-bottom: 1rem;
+
+      &:last-child .filter__dropdown .filter__dropdown-content {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  .filter__dropdown {
+    position: relative;
+
+    & > span {
+      padding: 1rem 2rem;
+      display: block;
+      border-radius: 100rem;
+      position: relative;
+      background-color: $color-lightgray;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $color-font-dark;
+      cursor: pointer;
+
+      &::after {
+        margin-left: 0.5rem;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url('../img/chevron-down-blue.svg');
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+
+    &-content {
+      padding: 2rem;
+      position: absolute;
+      left: 0;
+      top: 90%;
+      z-index: 10;
+      width: 35rem;
+      background-color: $color-white;
+      opacity: 0;
+      pointer-events: none;
+      transition-property: opacity, top;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+
+      ul {
+        overflow: auto;
+        max-height: 30rem;
+      }
+    }
+
+    li {
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover,
+    &.active {
+      & > span {
+        &::after {
+          transform: rotate(-180deg);
+        }
+      }
+
+      & .filter__dropdown-content {
+        top: 100%;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  .filter__acc {
+    border-bottom: 1px solid $color-lightgray2;
+
+    & > span {
+      position: relative;
+      display: block;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        transform: translateY(-50%);
+        background: url('../img/chevron-down-gray.svg') 50% 50% no-repeat;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &.active {
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+    &-content {
+      padding-bottom: 2rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/*----------*/
+.filter-btn {
   padding-bottom: 3rem;
 }
 /*----------*/
-.filter + .filter-selected {
+.filter + .filter-selected,
+.filter-btn + .filter-selected {
   padding-top: 3rem;
   border-top: 1px solid $color-lightgray2;
 }
@@ -14,6 +154,7 @@
 
   span {
     margin-right: 2rem;
+    padding-bottom: 1rem;
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
@@ -52,4 +193,200 @@
   }
 }
 /*----------*/
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid $color-font-dark;
+    border-radius: 0.3rem;
+    transition-property: background, border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &::before {
+      content: '';
+      display: block;
+      margin-top: -0.45rem;
+      margin-left: -0.6rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: url('../img/icon-chek-w.svg') 50% 50% no-repeat;
+      width: 1.2rem;
+      height: 0.9rem;
+      opacity: 0;
+      transform: scale(2);
+      transition-property: transform, opacity;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.1s;
+    }
+  }
+  &__title {
+    padding-left: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  input:checked ~ &__btn {
+    border-color: $color-lightblue;
+    background-color: $color-lightblue;
+
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &:hover &__btn {
+    border-color: $color-lightblue;
+  }
+}
+/*----------*/
+.radio {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid $color-font-dark;
+    border-radius: 100rem;
+    transition-property: background, border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &::before {
+      content: '';
+      display: block;
+      margin-top: -0.5rem;
+      margin-left: -0.5rem;
+      border-radius: 100rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1rem;
+      height: 1rem;
+      opacity: 0;
+      background-color: $color-lightblue;
+      transform: scale(2);
+      transition-property: transform, opacity;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.1s;
+    }
+  }
+  &__title {
+    padding-left: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  input:checked ~ &__btn {
+    border-color: $color-lightblue;
+
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &:hover &__btn {
+    border-color: $color-lightblue;
+  }
+}
+/*----------*/
+.range {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  input {
+    border: none;
+    border-radius: 100rem;
+    background: $color-lightgray;
+    font-weight: 600;
+    text-align: center;
+    height: 4rem;
+    width: 45%;
+  }
+  span {
+    width: 10%;
+    text-align: center;
+  }
+
+  &__slider {
+    padding: 3rem 1rem 0;
+    width: 100%;
+  }
+}
+/*----------*/
+.noUi-target {
+  border: 0;
+  background: $color-lightgray2;
+}
+.noUi-connects {
+  border-radius: 100rem;
+}
+.noUi-connect {
+  background: $color-lightblue;
+}
+.noUi-horizontal {
+  height: 0.4rem;
+}
+.noUi-horizontal .noUi-handle {
+  width: 2rem;
+  height: 2rem;
+  right: -1rem;
+  top: -0.8rem;
+  border: 0;
+  background: $color-blue;
+  box-shadow: none;
+}
+.noUi-horizontal .noUi-handle:before,
+.noUi-horizontal .noUi-handle:after {
+  background: $color-white;
+  width: 0.2rem;
+  height: 0.8rem;
+}
+.noUi-horizontal .noUi-handle:before {
+  left: calc(50% - 0.3rem);
+}
+.noUi-horizontal .noUi-handle:after {
+  left: auto;
+  right: calc(50% - 0.3rem);
+}
 /*----------*/
