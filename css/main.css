@@ -705,7 +705,11 @@ button.b-button {
 
 /*----------*/
 .l-content {
-  flex: 1 auto; }
+  flex: 1 auto;
+  padding-bottom: 3rem; }
+  @media (min-width: 768px) {
+    .l-content {
+      padding-bottom: 5rem; } }
   .l-content .content__wrap {
     margin: auto;
     max-width: 1700px;
@@ -728,6 +732,8 @@ button.b-button {
       .l-content .content__col--w400 {
         width: 40rem;
         flex: 1 40em; } }
+  .l-content--main {
+    padding-bottom: 0; }
 
 /*----------*/
 .card {
@@ -2674,7 +2680,9 @@ button.swiper-pagination-bullet {
       margin-bottom: 26rem; } }
   @media (min-width: 1200px) {
     .slider {
-      margin-bottom: 7rem; } }
+      margin-bottom: 7rem;
+      margin-left: -6rem;
+      margin-right: -6rem; } }
   .slider .slider__content {
     padding: 2rem;
     width: 100%;
@@ -4052,7 +4060,7 @@ button.swiper-pagination-bullet {
       display: none; } }
 
 .news--main-news {
-  margin: 0 -100rem 7rem;
+  margin: 0 -100rem;
   padding: 7rem 100rem;
   background-color: #f5f7f8; }
   @media (max-width: calc(768px - 1px)) {
