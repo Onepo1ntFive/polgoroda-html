@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css';
 a,
 abbr,
 acronym,
@@ -545,6 +546,7 @@ button.b-button {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
+  border: 0;
   color: #fff;
   max-width: 100%;
   transition-property: opacity, background, color;
@@ -668,6 +670,10 @@ button.b-button {
   button.b-button--icon-arrow-dark:hover::after {
     left: 0.5rem;
     background: url("../img/arrow-right-short-w.svg") 50% 50% no-repeat; }
+
+/*----------*/
+.fancybox__backdrop {
+  background: rgba(0, 44, 93, 0.7); }
 
 /*----------*/
 @media (max-width: calc(768px - 1px)) {
@@ -2044,6 +2050,14 @@ button.swiper-pagination-bullet {
     padding-bottom: 0; }
   .form__item--half {
     width: 50%; }
+  .form__item--center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+
+.form__info {
+  font-size: 1.4rem;
+  color: #77909c; }
 
 .form__samples {
   margin-left: -0.5rem;
@@ -2105,7 +2119,7 @@ button.swiper-pagination-bullet {
   .form__sample-inner:hover::before, .form__sample-inner:hover::after {
     background-color: #002c5d; }
 
-.form label {
+.form__item > label {
   padding-bottom: 1rem;
   display: block;
   color: #8fa4ae;
@@ -2130,6 +2144,11 @@ button.swiper-pagination-bullet {
   appearance: none;
   -moz-appearance: textfield;
   -webkit-appearance: none; }
+
+.form--sign {
+  text-align: center; }
+  .form--sign .form-policy {
+    padding-top: 2rem; }
 
 .form-policy {
   text-align: center;
@@ -2335,6 +2354,30 @@ button.swiper-pagination-bullet {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-weight: normal; }
+
+.modal {
+  display: none;
+  width: calc(100% - 2rem);
+  max-width: 46rem; }
+  .modal__title {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 2.6rem;
+    color: #cfd8dc; }
+    @media (min-width: 768px) {
+      .modal__title {
+        font-size: 3.2rem; } }
+    .modal__title button {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      border-bottom: 1px solid transparent;
+      background: none;
+      font-weight: 600;
+      color: #263238;
+      transition: border-color 0.2s ease-in-out; }
+      .modal__title button:hover {
+        border-bottom-color: #263238; }
 
 .search {
   padding: 2rem;

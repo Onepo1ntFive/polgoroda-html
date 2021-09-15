@@ -55,7 +55,7 @@
                 </div>
               </div>
               <div class="header__btns">
-                <a href="#" class="header__btn"><img src="./img/icon-user.svg" alt=""><span class="hide-on-mobile">Войти</span></a>
+                <a href="#" class="header__btn" data-fancybox="dialog" data-src="#form-signin"><img src="./img/icon-user.svg" alt=""><span class="hide-on-mobile">Войти</span></a>
                 <a href="#" class="header__btn"><img src="./img/icon-shopping-cart.svg" alt=""><span class="hide-on-mobile">Корзина</span></a>
                 <span class="header__btn header__sandwich js-sidebar-show hide-on-desktop"><ins></ins> <span class="hide-on-mobile">Меню</span></span>
               </div>
@@ -1445,8 +1445,60 @@
           </div>
         </div>
         <div class="sidebar-bg js-sidebar-filter-bg"></div>
+        <div id="form-signin" class="modal">
+          <div class="modal__title">
+            <span>Вход</span> / <button data-fancybox="signin" data-src="#form-signup">Регистрация</button>
+          </div>
+          <form class="form form--sign">
+            <div class="form__items">
+              <div class="form__item">
+                <input type="text" placeholder="Email или телефон">
+              </div>
+              <div class="form__item">
+                <input type="password" placeholder="Пароль">
+              </div>
+              <div class="form__item">
+                <a class="b-button b-button--wide b-button--clear" href="#">Забыли пароль?</a>
+              </div>
+              <div class="form__item">
+                <button type="submit" class="b-button b-button--wide b-button--blue">Войти</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="form-signup" class="modal">
+          <div class="modal__title">
+            <button data-fancybox="signup" data-src="#form-signin">Вход</button> / <span>Регистрация</span>
+          </div>
+          <form class="form form--sign">
+            <div class="form__items">
+              <div class="form__item">
+                <input type="text" placeholder="Ваше имя">
+              </div>
+              <div class="form__item">
+                <input type="email" placeholder="Email">
+              </div>
+              <div class="form__item">
+                <input type="password" placeholder="Придумайте пароль">
+                <p class="form__info">Минимум 6 символов (букв, цифр и спец. знаков)</p>
+              </div>
+              <div class="form__item form__item--center">
+                <div class="checkbox">
+                  <input type="checkbox" name="checkbox-newsletter" id="checkbox-newsletter">
+                  <label for="checkbox-newsletter" class="checkbox__btn"></label>
+                  <label for="checkbox-newsletter" class="checkbox__title">Я хочу знать о скидках и акциях</label>
+                </div>
+              </div>
+              <div class="form__item">
+                <button type="submit" class="b-button b-button--wide b-button--blue">Зарегистрироваться</button>
+              </div>
+            </div>
+            <p class="form-policy">Нажимая “Зарегистрироваться”, я даю свое согласие на <a href="#">обработку персональных данных</a></p>
+          </form>
+        </div>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
