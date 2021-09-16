@@ -12,3 +12,4 @@
 - [Catalog detail](https://onepo1ntfive.github.io/polgoroda-html/catalog-detail.html)
 - [Samples](https://onepo1ntfive.github.io/polgoroda-html/sample.html)
 - [Search](https://onepo1ntfive.github.io/polgoroda-html/search-active.html)
+- [Cabinet](https://onepo1ntfive.github.io/polgoroda-html/lk.html)

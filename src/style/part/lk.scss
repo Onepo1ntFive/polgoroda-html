@@ -1,0 +1,312 @@
+.lk-menu {
+  padding: 1.5rem 1.5rem 0.5rem;
+  border-radius: 1rem;
+  background-color: $color-lightgray;
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 3rem 3rem 0.5rem;
+  }
+
+  &__collapse {
+    display: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+    }
+  }
+  @media (max-width: calc(#{$breakpoint-desktop} - 1px)) {
+    &__items > &__item:first-child {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -1.2rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        transform: rotate(0deg);
+        background: url('../img/chevron-down-blue.svg') 50% 50% no-repeat;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &.collapse {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 1rem;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 2.5rem;
+    }
+
+    &:last-child {
+      padding-top: 1.5rem;
+      border-top: 1px solid $color-lightgray2;
+
+      @media (min-width: $breakpoint-desktop) {
+        padding-top: 2.5rem;
+      }
+    }
+  }
+  path {
+    transition: fill 0.2s ease-in-out;
+  }
+  a {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: block;
+    position: relative;
+    padding-left: 3.5rem;
+    font-weight: 600;
+
+    &:hover {
+      color: $color-lightblue;
+
+      path {
+        fill: $color-lightblue;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    .active {
+      a {
+        color: $color-lightgray3;
+      }
+      a:hover {
+        path {
+          fill: $color-lightgray3;
+        }
+      }
+      path {
+        fill: $color-lightgray3;
+      }
+    }
+  }
+}
+// --------------
+.lk-edit {
+  max-width: 90rem;
+
+  &__input {
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+  }
+  &__delete {
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background: url('../img/icon-times.svg') 50% 50% no-repeat;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__item {
+    margin-bottom: 3rem;
+    min-height: 12rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    @media (min-width: $breakpoint-tablet) {
+      flex-wrap: nowrap;
+    }
+
+    p {
+      color: $color-lightgray3;
+      font-size: 1.6rem;
+
+      a {
+        border-bottom: 1px solid transparent;
+        color: $color-lightgray3;
+        transition: border-color 0.2s ease-in-out;
+
+        &:hover {
+          border-bottom-color: $color-lightgray3;
+        }
+      }
+    }
+  }
+  &__header {
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    span {
+      padding-right: 1rem;
+      line-height: 1;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: $color-font-dark;
+      white-space: nowrap;
+    }
+    ins {
+      padding-top: 0.3rem;
+      width: 100%;
+      border-bottom: 1px solid $color-lightgray2;
+    }
+  }
+  &__title {
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-font-dark;
+  }
+  &__btn {
+    padding-top: 2rem;
+    width: 100%;
+    margin-left: auto;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 0;
+      width: auto;
+    }
+
+    a {
+      padding-left: 3.5rem;
+      display: inline-block;
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-blue;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url('../img/icon-edit.svg') 50% 50% no-repeat;
+      }
+
+      &:hover {
+        color: $color-lightblue;
+      }
+    }
+  }
+}
+// --------------
+.lk-data {
+  max-width: 90rem;
+}
+// --------------
+.lk-orders {
+  max-width: 90rem;
+  font-size: 1.6rem;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  th,
+  td {
+    padding: 1rem 2rem;
+    text-align: left;
+  }
+  th {
+    font-size: 1.4rem;
+    color: $color-lightgray3;
+    border-bottom: 1px solid $color-lightgray2;
+  }
+  tr:nth-child(2n + 1) td {
+    background-color: $color-lightgray;
+  }
+  .lk-orders__id {
+    color: $color-font-dark;
+    font-weight: 600;
+  }
+  .lk-orders__date {
+    color: $color-lightgray3;
+  }
+  .lk-orders__status {
+    &--ok {
+      color: $color-green;
+    }
+    &--wait {
+      color: $color-orange;
+    }
+    &--bad {
+      color: $color-red;
+    }
+  }
+  .lk-orders__price {
+    color: $color-font-dark;
+    font-weight: 600;
+  }
+  .lk-orders__more {
+    font-weight: 600;
+  }
+
+  @media (max-width: calc(#{$breakpoint-tablet} - 1px)) {
+    table,
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+    }
+    th {
+      display: none;
+    }
+
+    table {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      width: auto;
+    }
+    tr {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    tr:first-child {
+      display: none;
+    }
+    tr:nth-child(2n + 1) {
+      background-color: $color-lightgray;
+    }
+    td {
+      width: 50%;
+      padding: 0.5rem 2rem;
+    }
+    td::before {
+      padding-bottom: 0.5rem;
+      display: block;
+      font-size: 1.2rem;
+      color: $color-lightgray3;
+      font-weight: normal;
+    }
+    .lk-orders__id::before {
+      content: 'Номер заказа';
+    }
+    .lk-orders__date::before {
+      content: 'Дата';
+    }
+    .lk-orders__status::before {
+      content: 'Статус';
+    }
+    .lk-orders__price::before {
+      content: 'Сумма';
+    }
+  }
+}

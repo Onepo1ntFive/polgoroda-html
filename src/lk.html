@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПолГорода - Напольные покрытия - Новости</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <div class="l-wrap">
+        //= template/_header.html
+    
+        <section class="l-content"> 
+            <div class="content__wrap">
+              //= template/breadcrumbs.html
+                
+              <div class="content">
+                  <h1>Личный кабинет</h1>
+              </div>
+              <div class="content__cols">
+                    <div class="content__col content__col--w400">
+                        //= template/lk-menu.html
+                    </div>
+                    <div class="content__col">
+                        <!-- Панель управления -->
+                        //= template/lk-panel.html
+                        
+                        <!-- Данные учётной записи -->
+                        //= template/lk-user-data.html
+
+                        <!-- Адрес доставки -->
+                        //= template/lk-address.html
+
+                        <!-- Заказы -->
+                        //= template/lk-orders.html
+
+                        <!-- Заказ -->
+                        //= template/lk-order.html
+                    </div>
+            </div>
+
+            </div>
+        </section>
+        
+        //= template/_footer.html
+
+        //= template/sidebar.html
+        //= template/popup-signin.html
+        //= template/popup-signup.html
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

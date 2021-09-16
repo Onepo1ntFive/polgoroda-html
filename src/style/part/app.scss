@@ -143,6 +143,17 @@ button.b-button {
     &:hover {
       background-color: $color-lightblue;
     }
+
+    &:disabled {
+      background-color: $color-lightgray;
+      color: $color-lightgray3;
+      cursor: default;
+      
+      &:hover {
+        background-color: $color-lightgray;
+        color: $color-lightgray3;
+      }
+    }
   }
   &--white {
     background-color: $color-white;
@@ -157,6 +168,7 @@ button.b-button {
     text-align: center;
   }
   &--clear {
+    background: none;
     padding-left: 0;
     padding-right: 0;
     color: $color-blue;
