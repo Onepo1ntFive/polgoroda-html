@@ -732,12 +732,12 @@ button.b-button {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 3rem;
-    flex: 1 auto;
     width: 100%; }
     @media (min-width: 1200px) {
-      .l-content .content__col--w400 {
-        width: 40rem;
-        flex: 1 40em; } }
+      .l-content .content__col {
+        width: calc(100% - 42rem); }
+        .l-content .content__col--w400 {
+          flex-basis: 42rem; } }
   .l-content--main {
     padding-bottom: 0; }
 
@@ -4148,5 +4148,114 @@ button.swiper-pagination-bullet {
         padding: 10rem 14rem; } }
   .news-detail__gallery {
     padding-bottom: 3rem; }
+
+.lk-menu {
+  padding: 1.5rem 1.5rem 0.5rem;
+  border-radius: 1rem;
+  background-color: #f5f7f8; }
+  @media (min-width: 1200px) {
+    .lk-menu {
+      padding: 3rem 3rem 0.5rem; } }
+  .lk-menu .lk-menu__collapse {
+    display: none; }
+    @media (min-width: 1200px) {
+      .lk-menu .lk-menu__collapse {
+        display: block; } }
+  .lk-menu .lk-menu__item {
+    margin-bottom: 1rem; }
+    @media (min-width: 1200px) {
+      .lk-menu .lk-menu__item {
+        margin-bottom: 2.5rem; } }
+    .lk-menu .lk-menu__item:last-child {
+      padding-top: 1.5rem;
+      border-top: 1px solid #cfd8dc; }
+      @media (min-width: 1200px) {
+        .lk-menu .lk-menu__item:last-child {
+          padding-top: 2.5rem; } }
+  .lk-menu path {
+    transition: fill 0.2s ease-in-out; }
+  .lk-menu a {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: block;
+    position: relative;
+    padding-left: 3.5rem;
+    font-weight: 600; }
+    .lk-menu a:hover {
+      color: #00b6da; }
+      .lk-menu a:hover path {
+        fill: #00b6da; }
+  .lk-menu svg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+  @media (min-width: 1200px) {
+    .lk-menu .active a {
+      color: #77909c; }
+    .lk-menu .active a:hover path {
+      fill: #77909c; }
+    .lk-menu .active path {
+      fill: #77909c; } }
+
+.lk-edit {
+  max-width: 90rem; }
+  .lk-edit__item {
+    margin-bottom: 2rem;
+    min-height: 12rem;
+    display: flex;
+    flex-flow: row nowrap; }
+    .lk-edit__item p {
+      color: #77909c;
+      font-size: 1.6rem; }
+      .lk-edit__item p a {
+        border-bottom: 1px solid transparent;
+        color: #77909c;
+        transition: border-color 0.2s ease-in-out; }
+        .lk-edit__item p a:hover {
+          border-bottom-color: #77909c; }
+  .lk-edit__header {
+    padding-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
+    .lk-edit__header span {
+      padding-right: 1rem;
+      line-height: 1;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #263238;
+      white-space: nowrap; }
+    .lk-edit__header ins {
+      padding-top: 0.3rem;
+      width: 100%;
+      border-bottom: 1px solid #cfd8dc; }
+  .lk-edit__title {
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #263238; }
+  .lk-edit__btn {
+    margin-left: auto; }
+    .lk-edit__btn a {
+      padding-left: 3.5rem;
+      display: inline-block;
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #002c5d; }
+      .lk-edit__btn a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url("../img/icon-edit.svg") 50% 50% no-repeat; }
+      .lk-edit__btn a:hover {
+        color: #00b6da; }
 
 /*# sourceMappingURL=maps/main.css.map */
