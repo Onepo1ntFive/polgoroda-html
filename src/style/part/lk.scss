@@ -103,6 +103,11 @@
     padding-top: 0.5rem;
     padding-right: 1rem;
   }
+  @media (max-width: calc(#{$breakpoint-tablet} - 1px)) {
+    &__input + &__content {
+      width: calc(100% - 3rem);
+    }
+  }
   &__delete {
     margin-left: 1rem;
     width: 3rem;
