@@ -4360,6 +4360,9 @@ button.swiper-pagination-bullet {
   .lk-edit__input {
     padding-top: 0.5rem;
     padding-right: 1rem; }
+  @media (max-width: calc(768px - 1px)) {
+    .lk-edit__input + .lk-edit__content {
+      width: calc(100% - 3rem); } }
   .lk-edit__delete {
     margin-left: 1rem;
     width: 3rem;
