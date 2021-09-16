@@ -114,9 +114,9 @@ const imagesDev = () => {
 }
 
 const watch = () => {
-    gulp.watch(path.watch.html, html)
-    gulp.watch(path.watch.style, styles)
-    gulp.watch(path.watch.js, scripts)
+    gulp.watch(path.watch.html, html).on('change', browserSync.reload);
+    gulp.watch(path.watch.style, styles).on('change', browserSync.reload);
+    gulp.watch(path.watch.js, scripts).on('change', browserSync.reload);
 }
 
 // help tasks
