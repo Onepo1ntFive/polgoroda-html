@@ -25,7 +25,12 @@
     }
   }
   &__info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
     font-size: 1.4rem;
+    line-height: 1;
     color: $color-lightgray3;
   }
   &__samples {
@@ -147,6 +152,9 @@
       padding-bottom: 0;
     }
 
+    &--info {
+      margin-bottom: 4rem;
+    }
     &--half {
       width: 100%;
       

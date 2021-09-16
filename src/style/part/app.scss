@@ -255,6 +255,40 @@ button.b-button {
       }
     }
   }
+  &--icon-back {
+    &::before {
+      margin-right: 1rem;
+      position: relative;
+      left: 0;
+      margin-top: -0.3em;
+      content: '';
+      background: url('../img/arrow-left-short.svg') 50% 50% no-repeat;
+      display: inline-block;
+      width: 2.4rem;
+      height: 2.4rem;
+      vertical-align: middle;
+      transition-property: left, background;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+  &--icon-print {
+    &::before {
+      margin-right: 1rem;
+      position: relative;
+      left: 0;
+      margin-top: -0.3em;
+      content: '';
+      background: url('../img/icon-print.svg') 50% 50% no-repeat;
+      display: inline-block;
+      width: 2.4rem;
+      height: 2.4rem;
+      vertical-align: middle;
+      transition-property: left, background;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
+  }
 }
 /*----------*/
 .fancybox__backdrop {
