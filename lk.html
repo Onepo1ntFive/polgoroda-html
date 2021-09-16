@@ -243,7 +243,10 @@
                 <a href="#">Каталог</a>
                 <span>Паркетная доска</span>
               </nav>
-
+                
+              <div class="content">
+                  <h1>Личный кабинет</h1>
+              </div>
               <div class="content__cols">
                     <div class="content__col content__col--w400">
                         <nav class="lk-menu">
@@ -311,6 +314,7 @@
                         </nav>
                     </div>
                     <div class="content__col">
+                        <!-- Панель управления -->
                         
                         <div class="lk-edit">
                           <div class="content">
@@ -349,6 +353,240 @@
                             </div>
                           </div>
                         </div>
+                        
+                        <!-- Данные учётной записи -->
+                        <div class="lk-data">
+                          <h2>Данные учётной записи</h2>
+                          <div class="lk-data__form">
+                            <form class="form">
+                              <div class="form__group">
+                                <div class="form__group-title"><span>Редактировать данные</span><ins></ins></div>
+                                <div class="form__items">
+                                  <div class="form__item form__item--label form__item--half">
+                                    <input type="text" value="Геннадий" placeholder="placeholder" required>
+                                    <label for="">Ваше имя *</label>
+                                  </div>
+                                  <div class="form__item form__item--label form__item--half">
+                                    <input type="text" value="Захаров" placeholder="placeholder" required>
+                                    <label for="">Фамилия *</label>
+                                  </div>
+                                  <div class="form__item form__item--label form__item--half">
+                                    <input type="tel" placeholder="placeholder" required>
+                                    <label for="">Укажите контактный телефон *</label>
+                                  </div>
+                                  <div class="form__item form__item--label form__item--half">
+                                    <input type="email" value="gennazaharov@gmail.com " placeholder="placeholder" required>
+                                    <label for="">Адрес электронной почты *</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="form__group">
+                                <div class="form__group-title"><span>Изменить пароль </span><ins></ins></div>
+                                <div class="form__items">
+                                  <div class="form__item form__item--label form__item--half">
+                                    <input type="password" required>
+                                    <label for="">Текущий пароль *</label>
+                                  </div>
+                                  <div class="form__item form__item--label form__item--half">
+                                    <input type="password" required>
+                                    <label for="">Новый пароль *</label>
+                                  </div>
+                                  <div class="form__item form__item--label form__item--half">
+                                    <input type="password" required>
+                                    <label for="">Подтвердить новый пароль *</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="form__item">
+                                <button type="submit" class="b-button b-button--blue b-button--wide" disabled>Сохранить изменения</button>
+                              </div>
+                              <div class="form__item">
+                                <button type="submit" class="b-button b-button--blue b-button--wide">Сохранить изменения</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+
+                        <!-- Адрес доставки -->
+                        <div class="lk-edit">
+                          <div class="content">
+                            <h2>Адрес доставки</h2>
+                          </div>
+                          <div class="lk-edit__header">
+                            <span>Данные учётной записи</span>
+                            <ins></ins><span class="lk-edit__delete"></span>
+                          </div>
+                          <div class="lk-edit__items">
+                            <div class="lk-edit__item">
+                              <div class="lk-edit__input">
+                                <div class="radio">
+                                  <input type="radio" name="adress" id="adress-1" checked>
+                                  <label class="radio__btn" for="adress-1"></label>
+                                </div>
+                              </div>
+                              <label for="adress-1" class="lk-edit__content">
+                                <div class="lk-edit__title">ул Связистов, д 2, кв 381</div>
+                                <p>Одинцово, село Немчиновка, 143025, Россия</p>
+                                <p>Захаров Геннадий </p>
+                                <p>Телефон: <a href="tel:+79262308030">+7 (926) 230-80-30</a></p>
+                              </label>
+                              <div class="lk-edit__btn">
+                                <a href="#">Редактировать</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lk-edit">
+                          <div class="lk-edit__header">
+                            <span>Адрес доставки</span>
+                            <ins></ins><span class="lk-edit__delete"></span>
+                          </div>
+                          <div class="lk-edit__items">
+                            <div class="lk-edit__item">
+                              <div class="lk-edit__input">
+                                <div class="radio">
+                                  <input type="radio" name="adress" id="adress-2">
+                                  <label class="radio__btn" for="adress-2"></label>
+                                </div>
+                              </div>
+                              <label for="adress-2" class="lk-edit__content">
+                                <div class="lk-edit__title">ул Полевая, д.123, кв.12</div>
+                                <p>Москва, 117623, Россия</p>
+                                <p>Захаров Геннадий </p>
+                                <p>Телефон: <a href="tel:+79167937281">+7 (916) 793-72-81</a></p>
+                              </label>
+                              <div class="lk-edit__btn">
+                                <a href="#">Редактировать</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="lk-edit__btn">
+                            <span class="b-button b-button--blue b-button--wide" data-fancybox="dialog-adress" data-src="#form-add-address">Добавить новый адрес </span>
+                          </div>
+                        </div>
+                        <div id="form-add-address" class="modal">
+                          <div class="modal__title">Новый адрес</div>
+                          <form class="form form--sign">
+                            <div class="form__items">
+                              <div class="form__item form__item--label">
+                                <input type="text" placeholder="Контактное лицо *" required>
+                                <label for="">Контактное лицо * </label>
+                              </div>
+                              <div class="form__item form__item--label">
+                                <input type="tel" placeholder="Телефон для связи * " required>
+                                <label for="">Телефон для связи * </label>
+                              </div>
+                              <div class="form__item form__item--label">
+                                <input type="text" placeholder="Населенный пункт * " required>
+                                <label for="">Населенный пункт * </label>
+                              </div>
+                              <div class="form__item form__item--label">
+                                <input type="text" placeholder="Улица * " required>
+                                <label for="">Улица * </label>
+                              </div>
+                              <div class="form__item-group">
+                                <div class="form__item form__item--label">
+                                  <input type="text" placeholder="Улица * " required>
+                                  <label for="">Дом * </label>
+                                </div>
+                                <div class="form__item form__item--label">
+                                  <input type="text" placeholder="Улица * " required>
+                                  <label for="">Кв. / Офис *</label>
+                                </div>
+                                <div class="form__item form__item--label">
+                                  <input type="text" placeholder="Улица * " required>
+                                  <label for="">Индекс *</label>
+                                </div>
+                              </div>
+                              <div class="form__item form__item--right">
+                                <button type="submit" class="b-button b-button--clear">Очистить </button>
+                                <button type="submit" class="b-button b-button--blue">Добавить</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <!-- Заказы -->
+                        <h2>Мои заказы</h2>
+                        <div class="lk-orders">
+                          <table>
+                            <tr>
+                              <th>Номер заказа</th>
+                              <th>Дата</th>
+                              <th>Статус</th>
+                              <th>Сумма</th>
+                              <th></th>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--wait">Ожидает обработки</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--ok">Завершен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--ok">Завершен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--ok">Завершен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--ok">Завершен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--ok">Завершен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--bad">Отменен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--ok">Завершен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                              <td class="lk-orders__id">ID: COE-61678</td>
+                              <td class="lk-orders__date">12.12.2020</td>
+                              <td class="lk-orders__status lk-orders__status--ok">Завершен</td>
+                              <td class="lk-orders__price">26 243 руб</td>
+                              <td class="lk-orders__more"><a href="#">Подробнее</a></td>
+                            </tr>
+                          </table>
+                        </div>
+
+                        <!-- Заказ -->
+                        <pre>lk-order.html</pre>
                     </div>
             </div>
 

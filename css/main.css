@@ -578,6 +578,17 @@ button.b-button {
     a.b-button--blue:hover,
     button.b-button--blue:hover {
       background-color: #00b6da; }
+    .b-button--blue:disabled,
+    a.b-button--blue:disabled,
+    button.b-button--blue:disabled {
+      background-color: #f5f7f8;
+      color: #77909c;
+      cursor: default; }
+      .b-button--blue:disabled:hover,
+      a.b-button--blue:disabled:hover,
+      button.b-button--blue:disabled:hover {
+        background-color: #f5f7f8;
+        color: #77909c; }
   .b-button--white,
   a.b-button--white,
   button.b-button--white {
@@ -595,6 +606,7 @@ button.b-button {
   .b-button--clear,
   a.b-button--clear,
   button.b-button--clear {
+    background: none;
     padding-left: 0;
     padding-right: 0;
     color: #002c5d; }
@@ -2034,26 +2046,25 @@ button.swiper-pagination-bullet {
       .footer .footer__social a:hover img {
         opacity: 0.75; }
 
-.form__items {
-  margin-left: -1rem;
-  margin-right: -1rem;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-end; }
-
-.form__item {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 2rem;
-  width: 100%; }
-  .form__item:last-child {
-    padding-bottom: 0; }
-  .form__item--half {
-    width: 50%; }
-  .form__item--center {
+.form__group {
+  padding-bottom: 5rem; }
+  .form__group-title {
+    padding-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center; }
+    flex-flow: row nowrap;
+    align-items: center; }
+    .form__group-title span {
+      padding-right: 1rem;
+      line-height: 1;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #263238;
+      white-space: nowrap; }
+    .form__group-title ins {
+      padding-top: 0.3rem;
+      width: 100%;
+      border-bottom: 1px solid #cfd8dc; }
 
 .form__info {
   font-size: 1.4rem;
@@ -2144,6 +2155,95 @@ button.swiper-pagination-bullet {
   appearance: none;
   -moz-appearance: textfield;
   -webkit-appearance: none; }
+
+.form__items {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end; }
+
+.form__item {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%; }
+  .form__item:last-child {
+    padding-bottom: 0; }
+  .form__item--half {
+    width: 100%; }
+    @media (min-width: 768px) {
+      .form__item--half {
+        width: 50%; } }
+  .form__item--right {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; }
+    .form__item--right button {
+      margin-left: 2rem; }
+  .form__item--center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  .form__item--label input:not([type='checkbox']),
+  .form__item--label input:not([type='radio']),
+  .form__item--label textarea {
+    padding: 1.5rem 2.4rem 0.9rem;
+    transition: padding 0.2s ease-in-out; }
+  .form__item--label input:not([type='checkbox']):invalid,
+  .form__item--label input:not([type='radio']):invalid,
+  .form__item--label textarea:invalid,
+  .form__item--label input:not([type='checkbox']):placeholder-shown,
+  .form__item--label input:not([type='radio']):placeholder-shown,
+  .form__item--label textarea:placeholder-shown {
+    padding: 1.2rem 2.4rem; }
+  .form__item--label input ~ label {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20%;
+    left: 3.4rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition-property: top, transform, font-size;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out; }
+  .form__item--label input:focus ~ label {
+    top: 20%; }
+  .form__item--label input:invalid ~ label,
+  .form__item--label input:placeholder-shown ~ label {
+    top: 50%; }
+  .form__item--label input::-webkit-input-placeholder {
+    color: transparent; }
+  .form__item--label input:-moz-placeholder {
+    color: transparent;
+    opacity: 1; }
+  .form__item--label input::-moz-placeholder {
+    color: transparent;
+    opacity: 1; }
+  .form__item--label input:-ms-input-placeholder {
+    color: transparent; }
+
+.form .form__item-group {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -0.2rem;
+  margin-right: -0.2rem; }
+  .form .form__item-group .form__item {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    width: 33.33%; }
+  .form .form__item-group .form__item input:not([type='checkbox']),
+  .form .form__item-group .form__item input:not([type='radio']) {
+    border-radius: 0; }
+  .form .form__item-group .form__item:first-child input:not([type='checkbox']),
+  .form .form__item-group .form__item:first-child input:not([type='radio']) {
+    border-radius: 100rem 0 0 100rem; }
+  .form .form__item-group .form__item:last-child input:not([type='checkbox']),
+  .form .form__item-group .form__item:last-child input:not([type='radio']) {
+    border-radius: 0 100rem 100rem 0; }
 
 .form--sign {
   text-align: center; }
@@ -2362,11 +2462,12 @@ button.swiper-pagination-bullet {
   .modal__title {
     margin-bottom: 2rem;
     font-weight: 600;
-    font-size: 2.6rem;
-    color: #cfd8dc; }
+    font-size: 2.6rem; }
     @media (min-width: 768px) {
       .modal__title {
         font-size: 3.2rem; } }
+    .modal__title span {
+      color: #cfd8dc; }
     .modal__title button {
       padding: 0;
       margin: 0;
@@ -4156,21 +4257,36 @@ button.swiper-pagination-bullet {
   @media (min-width: 1200px) {
     .lk-menu {
       padding: 3rem 3rem 0.5rem; } }
-  .lk-menu .lk-menu__collapse {
+  .lk-menu__collapse {
     display: none; }
     @media (min-width: 1200px) {
-      .lk-menu .lk-menu__collapse {
+      .lk-menu__collapse {
         display: block; } }
-  .lk-menu .lk-menu__item {
+  @media (max-width: calc(1200px - 1px)) {
+    .lk-menu__items > .lk-menu__item:first-child::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -1.2rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      transform: rotate(0deg);
+      background: url("../img/chevron-down-blue.svg") 50% 50% no-repeat;
+      transition: transform 0.2s ease-in-out; }
+    .lk-menu__items > .lk-menu__item:first-child.collapse::before {
+      transform: rotate(180deg); } }
+  .lk-menu__item {
+    position: relative;
     margin-bottom: 1rem; }
     @media (min-width: 1200px) {
-      .lk-menu .lk-menu__item {
+      .lk-menu__item {
         margin-bottom: 2.5rem; } }
-    .lk-menu .lk-menu__item:last-child {
+    .lk-menu__item:last-child {
       padding-top: 1.5rem;
       border-top: 1px solid #cfd8dc; }
       @media (min-width: 1200px) {
-        .lk-menu .lk-menu__item:last-child {
+        .lk-menu__item:last-child {
           padding-top: 2.5rem; } }
   .lk-menu path {
     transition: fill 0.2s ease-in-out; }
@@ -4200,11 +4316,27 @@ button.swiper-pagination-bullet {
 
 .lk-edit {
   max-width: 90rem; }
+  .lk-edit__input {
+    padding-top: 0.5rem;
+    padding-right: 1rem; }
+  .lk-edit__delete {
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background: url("../img/icon-times.svg") 50% 50% no-repeat;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out; }
+    .lk-edit__delete:hover {
+      opacity: 1; }
   .lk-edit__item {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     min-height: 12rem;
     display: flex;
-    flex-flow: row nowrap; }
+    flex-flow: row wrap; }
+    @media (min-width: 768px) {
+      .lk-edit__item {
+        flex-wrap: nowrap; } }
     .lk-edit__item p {
       color: #77909c;
       font-size: 1.6rem; }
@@ -4215,7 +4347,6 @@ button.swiper-pagination-bullet {
         .lk-edit__item p a:hover {
           border-bottom-color: #77909c; }
   .lk-edit__header {
-    padding-bottom: 2.5rem;
     padding-bottom: 2.5rem;
     display: flex;
     flex-flow: row nowrap;
@@ -4237,7 +4368,13 @@ button.swiper-pagination-bullet {
     font-weight: 600;
     color: #263238; }
   .lk-edit__btn {
+    padding-top: 2rem;
+    width: 100%;
     margin-left: auto; }
+    @media (min-width: 768px) {
+      .lk-edit__btn {
+        padding-top: 0;
+        width: auto; } }
     .lk-edit__btn a {
       padding-left: 3.5rem;
       display: inline-block;
@@ -4257,5 +4394,81 @@ button.swiper-pagination-bullet {
         background: url("../img/icon-edit.svg") 50% 50% no-repeat; }
       .lk-edit__btn a:hover {
         color: #00b6da; }
+
+.lk-data {
+  max-width: 90rem; }
+
+.lk-orders {
+  max-width: 90rem;
+  font-size: 1.6rem; }
+  .lk-orders table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0; }
+  .lk-orders th,
+  .lk-orders td {
+    padding: 1rem 2rem;
+    text-align: left; }
+  .lk-orders th {
+    font-size: 1.4rem;
+    color: #77909c;
+    border-bottom: 1px solid #cfd8dc; }
+  .lk-orders tr:nth-child(2n + 1) td {
+    background-color: #f5f7f8; }
+  .lk-orders .lk-orders__id {
+    color: #263238;
+    font-weight: 600; }
+  .lk-orders .lk-orders__date {
+    color: #77909c; }
+  .lk-orders .lk-orders__status--ok {
+    color: #046e00; }
+  .lk-orders .lk-orders__status--wait {
+    color: #edab00; }
+  .lk-orders .lk-orders__status--bad {
+    color: #c32300; }
+  .lk-orders .lk-orders__price {
+    color: #263238;
+    font-weight: 600; }
+  .lk-orders .lk-orders__more {
+    font-weight: 600; }
+  @media (max-width: calc(768px - 1px)) {
+    .lk-orders table,
+    .lk-orders tbody,
+    .lk-orders tr,
+    .lk-orders th,
+    .lk-orders td {
+      display: block; }
+    .lk-orders th {
+      display: none; }
+    .lk-orders table {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      width: auto; }
+    .lk-orders tr {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: flex;
+      flex-flow: row wrap; }
+    .lk-orders tr:first-child {
+      display: none; }
+    .lk-orders tr:nth-child(2n + 1) {
+      background-color: #f5f7f8; }
+    .lk-orders td {
+      width: 50%;
+      padding: 0.5rem 2rem; }
+    .lk-orders td::before {
+      padding-bottom: 0.5rem;
+      display: block;
+      font-size: 1.2rem;
+      color: #77909c;
+      font-weight: normal; }
+    .lk-orders .lk-orders__id::before {
+      content: 'Номер заказа'; }
+    .lk-orders .lk-orders__date::before {
+      content: 'Дата'; }
+    .lk-orders .lk-orders__status::before {
+      content: 'Статус'; }
+    .lk-orders .lk-orders__price::before {
+      content: 'Сумма'; } }
 
 /*# sourceMappingURL=maps/main.css.map */
