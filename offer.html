@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПолГорода - Напольные покрытия - Корзина</title>
+    <title>ПолГорода - Напольные покрытия - Новости детальная</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -238,221 +238,149 @@
     
         <section class="l-content"> 
             <div class="content__wrap">
-                <nav class="breadcrumbs">
-                  <a href="#">Главная</a>
-                  <a href="#">Каталог</a>
-                  <span>Паркетная доска</span>
-                </nav>
-                <div class="cart">
-                  <div class="cart__header">
-                    <h1>Корзина</h1>
-                    <button class="b-button b-button--clear b-button--icon-basket cart__header-btn">Очистить козрину</button>
-                  </div>
-                  <div class="cart__items">
-                    <!--  -->
-                    <div class="cart__item">
-                      <picture class="cart__pic">
-                        <source srcset='./img/catalog-pic-1.webp' type='image/webp'>
-                        <source srcset='./img/catalog-pic-1.jpg' type='image/jpeg'>
-                        <img src='./img/catalog-pic-1.jpg' alt=''>
-                      </picture>
-                      <div class="cart__content">
-                        <div class="cart__details">
-                          <div class="cart__id">К090117</div>
-                          <div class="cart__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                        </div>
-                        <div class="cart__price">
-                          <div class="cart__mini-title">Цена за м</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                          <div class="cart__mini-title">1 упаковка = 3.41 м<sup>2</sup></div>
-                        </div>
-                        <div class="cart__count">
-                          <div class="cart__mini-title">Упаковок</div>
-                          <div class="count"> 
-                            <div class="count">
-                              <span class="count__btn count__minus js-count-input-minus"></span>
-                              <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-                              <span class="count__btn count__plus js-count-input-plus"></span>
-                            </div>
-                          </div>
-                          <div class="cart__mini-title">1 упаковка = 5 327.77 ₽</div>
-                        </div>
-                        <div class="cart__price cart__price--summ">
-                          <div class="cart__mini-title">Сумма</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span></div>
-                        </div>
+              <nav class="breadcrumbs breadcrumbs--noborder">
+                <a href="#">Главная</a>
+                <a href="#">Каталог</a>
+                <span>Паркетная доска</span>
+              </nav>
+            </div>
+            <div class="news news-detail">
+              <div class="news-detail__inner">
+                <div class="news__date">Дизайнерам</div>
+                <h1>Предложим лучшее решение для вашего проекта</h1>
+                <div class="news-detail__gallery">
+                  <div class="swiper-container swiper-container-gallery">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
+                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
+                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
+                        </picture>
                       </div>
-                      <div class="cart__delete"><button class="b-button b-button--clear">Удалить</button></div>
-                    </div>
-                    <!--  -->
-                    <div class="cart__item">
-                      <picture class="cart__pic">
-                        <source srcset='./img/catalog-pic-4.webp' type='image/webp'>
-                        <source srcset='./img/catalog-pic-4.jpg' type='image/jpeg'>
-                        <img src='./img/catalog-pic-4.jpg' alt=''>
-                      </picture>
-                      <div class="cart__content">
-                        <div class="cart__details">
-                          <div class="cart__id">К090117</div>
-                          <div class="cart__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                        </div>
-                        <div class="cart__price">
-                          <div class="cart__mini-title">Цена за м</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                          <div class="cart__mini-title">1 упаковка = 3.41 м<sup>2</sup></div>
-                        </div>
-                        <div class="cart__count">
-                          <div class="cart__mini-title">Упаковок</div>
-                          <div class="count"> 
-                            <div class="count">
-                              <span class="count__btn count__minus js-count-input-minus"></span>
-                              <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-                              <span class="count__btn count__plus js-count-input-plus"></span>
-                            </div>
-                          </div>
-                          <div class="cart__mini-title">1 упаковка = 5 327.77 ₽</div>
-                        </div>
-                        <div class="cart__price cart__price--summ">
-                          <div class="cart__mini-title">Сумма</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span></div>
-                        </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
+                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
+                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
+                        </picture>
                       </div>
-                      <div class="cart__delete"><button class="b-button b-button--clear">Удалить</button></div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
+                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
+                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
+                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
+                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
+                        </picture>
+                      </div>
                     </div>
-                    <!--  -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                   </div>
-                  <div class="cart__line">
-                    <a href="#" class="b-button b-button--clear b-button--icon-back">Назад к покупкам</a>
-                    <div class="cart__total">
-                      <div class="cart__mini-title">Итого</div>
-                      <div class="cart__price cart__price--summ">3 500 <span class="b-ruble-font">Р</span></div>
+                </div>
+                <div class="news-detail__content content">
+                  <h2>ПолГорода — сервис № 1 по работе с напольными покрытиями.</h2>
+                  <p>Мы оказываем полный цикл услуг — от консультации по напольным покрытиям и продажи до укладки по индивидуальному дизайн-проекту. Мы нацелены на максимальную экономию Вашего времени и все берем в свои руки:</p>
+                  <ul>
+                    <li>Продемонстрируем выбранные Вами образцы напольных покрытий непосредственно на объекте, что позволит выбрать наиболее точные и желаемые параметры покрытия по цвету, дизайну, способу укладки</li>
+                    <li>Доставим все необходимое на объект</li>
+                    <li>Уложим напольное покрытие «под ключ»</li>
+                  </ul>
+                  <p>&nbsp;</p>
+                  <h2>Мы не предлагаем лучшие решения для Вашего проекта, мы их воплощаем в жизнь!</h2>
+                  <p>И вот что мы гарантируем</p>
+                  <div class="benefits">
+                    <div class="benefits__items">
+                      <div class="benefits__item">
+                        <div class="benefits__pic">
+                          <img src="./img/benefits-icon-1.svg" alt="">
+                        </div>
+                        <div class="benefits__title">Слышать Ваши предпочтения</div>
+                      </div>
+                      <!--  -->
+                      <div class="benefits__item">
+                        <div class="benefits__pic">
+                          <img src="./img/benefits-icon-2.svg" alt="">
+                        </div>
+                        <div class="benefits__title">Договариваться об индивидуальных условиях сотрудничества</div>
+                      </div>
+                      <!--  -->
+                      <div class="benefits__item">
+                        <div class="benefits__pic">
+                          <img src="./img/benefits-icon-3.svg" alt="">
+                        </div>
+                        <div class="benefits__title">Консультировать по всем вопросам 
+                          в области напольных покрытий </div>
+                      </div>
+                      <!--  -->
+                      <div class="benefits__item">
+                        <div class="benefits__pic">
+                          <img src="./img/benefits-icon-4.svg" alt="">
+                        </div>
+                        <div class="benefits__title">Предоставлять гарантию на нашу работу не менее 2-х лет</div>
+                      </div>
+                      <!--  -->
+                      <div class="benefits__item">
+                        <div class="benefits__pic">
+                          <img src="./img/benefits-icon-5.svg" alt="">
+                        </div>
+                        <div class="benefits__title">Давать рекомендации к сотрудничеству</div>
+                      </div>
+                      <!--  -->
+                      <div class="benefits__item">
+                        <div class="benefits__pic">
+                          <img src="./img/benefits-icon-6.svg" alt="">
+                        </div>
+                        <div class="benefits__title">Давать рекомендации к сотрудничеству</div>
+                      </div>
+                      <!--  -->
                     </div>
                   </div>
                 </div>
-                <h2>Оформление заказа</h2>
+            
+                <div class="content">
+                  <h2>Свяжитесь с нами</h2>
+                  <p>Оставьте заявку и наш менеджер перезвонит вам</p>
+                </div>
                 <form class="form">
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Контактные данные</span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="text" placeholder="placeholder" required>
-                        <label for="">Контактное лицо *</label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="tel" placeholder="placeholder" required>
-                        <label for="">Телефон для связи *</label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="email" placeholder="placeholder" required>
-                        <label for="">Адрес электронной почты *</label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="text" placeholder="placeholder" required>
-                        <label for="">Населенный пункт * </label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="text" placeholder="placeholder" required>
-                        <label for="">Улица * </label>
-                      </div>
-                      <div class="form__item form__item--group form__item--third">
+                  <div class="form__cols">
+                    <div class="form__col">
+                      <div class="form__items">
                         <div class="form__item form__item--label">
-                          <input type="text" placeholder="Улица * " required>
-                          <label for="">Дом * </label>
+                          <input type="text" placeholder="Ваше имя * " required>
+                          <label for="">Ваше имя * </label>
                         </div>
                         <div class="form__item form__item--label">
-                          <input type="text" placeholder="Улица * " required>
-                          <label for="">Кв. / Офис *</label>
+                          <input type="tel" placeholder="Телефон для связи * " required>
+                          <label for="">Телефон для связи * </label>
                         </div>
                         <div class="form__item form__item--label">
-                          <input type="text" placeholder="Улица * " required>
-                          <label for="">Индекс *</label>
+                          <input type="email" placeholder="Адрес электронной почты *" required>
+                          <label for="">Адрес электронной почты *</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__items">
+                        <div class="form__item form__item--label">
+                          <textarea  placeholder="Ваш комментарий к заявке * " required></textarea>
+                          <label for="">Ваш комментарий к заявке * </label>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!--  -->
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Способ доставки</span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-1">
-                          <label class="radio__btn" for="form-radio-1-1"></label>
-                          <label class="radio__title" for="form-radio-1-1">Самовывоз (бесплатно)</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-2">
-                          <label class="radio__btn" for="form-radio-1-2"></label>
-                          <label class="radio__title" for="form-radio-1-2">Доставка по области (30 р/км)</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-3">
-                          <label class="radio__btn" for="form-radio-1-3"></label>
-                          <label class="radio__title" for="form-radio-1-3">Доставка по городу (500 <span class="b-ruble-font">Р</span>)</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-4">
-                          <label class="radio__btn" for="form-radio-1-4"></label>
-                          <label class="radio__title" for="form-radio-1-4">Доставка по регионам РФ до транспортной компании (бесплатно)</label>
-                        </div>
-                        <div class="form__info">+ по тарифу транспортной компании до вашего города</div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Способ оплаты </span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-pay" id="form-radio-2-1">
-                          <label class="radio__btn" for="form-radio-2-1"></label>
-                          <label class="radio__title" for="form-radio-2-1">Оплата онлайн картами VISA, MASTERCARD</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-pay" id="form-radio-2-2">
-                          <label class="radio__btn" for="form-radio-2-2"></label>
-                          <label class="radio__title" for="form-radio-2-2">Безналичный расчет</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-pay" id="form-radio-2-3">
-                          <label class="radio__btn" for="form-radio-2-3"></label>
-                          <label class="radio__title" for="form-radio-2-3">Наличными при получении</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Дополнительные пожелания</span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--label">
-                        <textarea placeholder="placeholder" required></textarea>
-                        <label for="">Ваш комментарий * </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__footer">
-                    <div class="checkbox">
-                      <input type="checkbox" name="policy" id="policy">
-                      <label class="checkbox__btn" for="policy"></label>
-                      <label class="checkbox__title" for="policy">Я согласен с условиями <a href="#">лицензионного соглашения</a> *</label>
-                    </div>
-                    <div class="form__footer-btn">
-                      <button class="b-button b-button--blue b-button--wide">Оформить заказ</button>
-                    </div>
+                  <div class="form__item form__item--center">
+                    <button type="submit" class="b-button b-button--blue b-button--big">Оставить заявку</button>
                   </div>
                 </form>
+              </div>
             </div>
         </section>
         
