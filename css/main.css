@@ -737,6 +737,12 @@ button.b-button {
   background: rgba(0, 44, 93, 0.7); }
 
 /*----------*/
+.carousel *,
+.carousel *:before,
+.carousel *:after {
+  box-sizing: border-box; }
+
+/*----------*/
 @media (max-width: calc(768px - 1px)) {
   .hide-on-mobile {
     display: none !important; } }
