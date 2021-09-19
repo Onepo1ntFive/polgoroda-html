@@ -13,3 +13,5 @@
 - [Samples](https://onepo1ntfive.github.io/polgoroda-html/sample.html)
 - [Search](https://onepo1ntfive.github.io/polgoroda-html/search-active.html)
 - [Cabinet](https://onepo1ntfive.github.io/polgoroda-html/lk.html)
+- [Cart](https://onepo1ntfive.github.io/polgoroda-html/cart.html)
+- [Offer](https://onepo1ntfive.github.io/polgoroda-html/offer.html)

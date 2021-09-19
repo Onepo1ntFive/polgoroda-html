@@ -1,0 +1,193 @@
+.cart {
+  margin-bottom: 7rem;
+
+  &__header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+
+    h1 {
+      margin-bottom: 1rem;
+      line-height: 1;
+      margin-right: 3rem;
+      width: 100%;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: auto;
+        margin-bottom: 0;
+      }
+    }
+    &-btn {
+      padding: 0 !important;
+    }
+  }
+
+  &__items {
+    padding-bottom: 3rem;
+  }
+
+  &__item {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $color-lightgray2;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    
+    @media (min-width: $breakpoint-desktop) {
+      align-items: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &__pic {
+    max-width: 8rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 12rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 16rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    width: calc(100% - 8rem);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+    @media (min-width: $breakpoint-tablet) {
+      width: calc(100% - 12rem);
+    }
+    @media (min-width: $breakpoint-desktop) {
+      padding-left: 3rem;
+      width: calc(100% - 16rem);
+    }
+
+    & > * {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      width: 100%;
+
+      @media (min-width: $breakpoint-tablet) {
+        padding-bottom: 0;
+        width: auto;
+      }
+    }
+  }
+
+  &__details {
+    padding-bottom: 3rem;
+    width: 100%;
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-bottom: 0;
+      width: auto;
+    }
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-font-dark;
+
+    &--summ {
+      padding-bottom: 0;
+      
+      @media (min-width: $breakpoint-desktop) {
+        min-width: 20rem;
+      }
+    }
+  }
+
+  &__id {
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: $color-lightgray3;
+  }
+
+  &__title {
+    line-height: 1.4;
+
+    a {
+      border-bottom: 1px solid transparent;
+      color: $color-font-dark;
+      transition: border-color 0.2s ease-in-out;
+
+      &:hover {
+        border-bottom-color: $color-font-dark;
+      }
+    }
+  }
+
+  &__mini-title {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: $color-lightgray3;
+  }
+  &__line {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: $color-lightgray;
+
+    @media (min-width: $breakpoint-tablet) {
+      justify-content: space-between;
+    }
+  }
+
+  &__total {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    
+    @media (min-width: $breakpoint-tablet) {
+      width: auto;
+    }
+
+    & > * {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &__delete {
+    position: absolute;
+    right: 0;
+    top: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    background: url('../img/icon-times.svg') 50% 50% no-repeat;
+    text-indent: -9999px;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

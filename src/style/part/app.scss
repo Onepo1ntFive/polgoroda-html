@@ -123,6 +123,7 @@ button.b-button {
 
   &--big {
     @media (min-width: $breakpoint-desktop) {
+      padding: 1rem 6rem;
       font-size: 1.7rem;
       font-weight: 600;
     }
@@ -184,6 +185,29 @@ button.b-button {
 
     &:hover {
       color: $color-white;
+    }
+  }
+  &--icon-basket {
+    &::after {
+      margin-left: 1rem;
+      position: relative;
+      left: 0;
+      margin-top: -0.3em;
+      content: '';
+      background: url('../img/icon-basket.svg') 50% 50% no-repeat;
+      display: inline-block;
+      width: 2.4rem;
+      height: 2.4rem;
+      vertical-align: middle;
+      transition-property: left, background;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
+    &:hover {
+      &::after {
+        // left: 0.5rem;
+        // background: url('../img/icon-filter.svg') 50% 50% no-repeat;
+      }
     }
   }
   &--icon-filter {

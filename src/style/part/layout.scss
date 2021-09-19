@@ -33,6 +33,9 @@
     @media (min-width: $breakpoint-tablet) {
         padding-bottom: 5rem;
     }
+    @media (min-width: $breakpoint-desktop) {
+        padding-bottom: 10rem;
+    }
 
     .content__wrap {
         margin: auto;

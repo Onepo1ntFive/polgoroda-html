@@ -1,0 +1,124 @@
+<h2>Оформление заказа</h2>
+<form class="form">
+  <div class="form__group">
+    <div class="form__group-title"><span>Контактные данные</span><ins></ins></div>
+    <div class="form__items">
+      <div class="form__item form__item--label form__item--third">
+        <input type="text" placeholder="placeholder" required>
+        <label for="">Контактное лицо *</label>
+      </div>
+      <div class="form__item form__item--label form__item--third">
+        <input type="tel" placeholder="placeholder" required>
+        <label for="">Телефон для связи *</label>
+      </div>
+      <div class="form__item form__item--label form__item--third">
+        <input type="email" placeholder="placeholder" required>
+        <label for="">Адрес электронной почты *</label>
+      </div>
+      <div class="form__item form__item--label form__item--third">
+        <input type="text" placeholder="placeholder" required>
+        <label for="">Населенный пункт * </label>
+      </div>
+      <div class="form__item form__item--label form__item--third">
+        <input type="text" placeholder="placeholder" required>
+        <label for="">Улица * </label>
+      </div>
+      <div class="form__item form__item--group form__item--third">
+        <div class="form__item form__item--label">
+          <input type="text" placeholder="Улица * " required>
+          <label for="">Дом * </label>
+        </div>
+        <div class="form__item form__item--label">
+          <input type="text" placeholder="Улица * " required>
+          <label for="">Кв. / Офис *</label>
+        </div>
+        <div class="form__item form__item--label">
+          <input type="text" placeholder="Улица * " required>
+          <label for="">Индекс *</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="form__group">
+    <div class="form__group-title"><span>Способ доставки</span><ins></ins></div>
+    <div class="form__items">
+      <div class="form__item form__item--half">
+        <div class="radio">
+          <input type="radio" name="form-deliv" id="form-radio-1-1">
+          <label class="radio__btn" for="form-radio-1-1"></label>
+          <label class="radio__title" for="form-radio-1-1">Самовывоз (бесплатно)</label>
+        </div>
+      </div>
+      <div class="form__item form__item--half">
+        <div class="radio">
+          <input type="radio" name="form-deliv" id="form-radio-1-2">
+          <label class="radio__btn" for="form-radio-1-2"></label>
+          <label class="radio__title" for="form-radio-1-2">Доставка по области (30 р/км)</label>
+        </div>
+      </div>
+      <div class="form__item form__item--half">
+        <div class="radio">
+          <input type="radio" name="form-deliv" id="form-radio-1-3">
+          <label class="radio__btn" for="form-radio-1-3"></label>
+          <label class="radio__title" for="form-radio-1-3">Доставка по городу (500 <span class="b-ruble-font">Р</span>)</label>
+        </div>
+      </div>
+      <div class="form__item form__item--half">
+        <div class="radio">
+          <input type="radio" name="form-deliv" id="form-radio-1-4">
+          <label class="radio__btn" for="form-radio-1-4"></label>
+          <label class="radio__title" for="form-radio-1-4">Доставка по регионам РФ до транспортной компании (бесплатно)</label>
+        </div>
+        <div class="form__info">+ по тарифу транспортной компании до вашего города</div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="form__group">
+    <div class="form__group-title"><span>Способ оплаты </span><ins></ins></div>
+    <div class="form__items">
+      <div class="form__item form__item--half">
+        <div class="radio">
+          <input type="radio" name="form-pay" id="form-radio-2-1">
+          <label class="radio__btn" for="form-radio-2-1"></label>
+          <label class="radio__title" for="form-radio-2-1">Оплата онлайн картами VISA, MASTERCARD</label>
+        </div>
+      </div>
+      <div class="form__item form__item--half">
+        <div class="radio">
+          <input type="radio" name="form-pay" id="form-radio-2-2">
+          <label class="radio__btn" for="form-radio-2-2"></label>
+          <label class="radio__title" for="form-radio-2-2">Безналичный расчет</label>
+        </div>
+      </div>
+      <div class="form__item form__item--half">
+        <div class="radio">
+          <input type="radio" name="form-pay" id="form-radio-2-3">
+          <label class="radio__btn" for="form-radio-2-3"></label>
+          <label class="radio__title" for="form-radio-2-3">Наличными при получении</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="form__group">
+    <div class="form__group-title"><span>Дополнительные пожелания</span><ins></ins></div>
+    <div class="form__items">
+      <div class="form__item form__item--label">
+        <textarea placeholder="placeholder" required></textarea>
+        <label for="">Ваш комментарий * </label>
+      </div>
+    </div>
+  </div>
+  <div class="form__footer">
+    <div class="checkbox">
+      <input type="checkbox" name="policy" id="policy">
+      <label class="checkbox__btn" for="policy"></label>
+      <label class="checkbox__title" for="policy">Я согласен с условиями <a href="#">лицензионного соглашения</a> *</label>
+    </div>
+    <div class="form__footer-btn">
+      <button class="b-button b-button--blue b-button--wide">Оформить заказ</button>
+    </div>
+  </div>
+</form>
