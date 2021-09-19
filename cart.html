@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПолГорода - Напольные покрытия - Новости детальная</title>
+    <title>ПолГорода - Напольные покрытия - Корзина</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -238,351 +238,222 @@
     
         <section class="l-content"> 
             <div class="content__wrap">
-              <nav class="breadcrumbs breadcrumbs--noborder">
-                <a href="#">Главная</a>
-                <a href="#">Каталог</a>
-                <span>Паркетная доска</span>
-              </nav>
+                <nav class="breadcrumbs">
+                  <a href="#">Главная</a>
+                  <a href="#">Каталог</a>
+                  <span>Паркетная доска</span>
+                </nav>
+                <div class="cart">
+                  <div class="cart__header">
+                    <h1>Корзина</h1>
+                    <button class="b-button b-button--clear b-button--icon-basket">Очистить козрину</button>
+                  </div>
+                  <div class="cart__items">
+                    <!--  -->
+                    <div class="cart__item">
+                      <picture class="cart__pic">
+                        <source srcset='./img/catalog-pic-1.webp' type='image/webp'>
+                        <source srcset='./img/catalog-pic-1.jpg' type='image/jpeg'>
+                        <img src='./img/catalog-pic-1.jpg' alt=''>
+                      </picture>
+                      <div class="cart__content">
+                        <div class="cart__details">
+                          <div class="cart__id">К090117</div>
+                          <div class="cart__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
+                        </div>
+                        <div class="cart__price">
+                          <div class="cart__mini-title">Цена за м</div>
+                          <div>3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
+                          <div class="cart__mini-title">1 упаковка = 3.41 м<sup>2</sup></div>
+                        </div>
+                        <div class="cart__count">
+                          <div class="cart__mini-title">Упаковок</div>
+                          <div class="count"> 
+                            <div class="count">
+                              <span class="count__btn count__minus js-count-input-minus"></span>
+                              <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                              <span class="count__btn count__plus js-count-input-plus"></span>
+                            </div>
+                          </div>
+                          <div class="cart__mini-title">1 упаковка = 5 327.77 ₽</div>
+                        </div>
+                        <div class="cart__price cart__price--summ">
+                          <div class="cart__mini-title">Сумма</div>
+                          <div>3 500 <span class="b-ruble-font">Р</span></div>
+                        </div>
+                      </div>
+                      <div class="cart__delete"><button class="b-button b-button--clear">Удалить</button></div>
+                    </div>
+                    <!--  -->
+                    <div class="cart__item">
+                      <picture class="cart__pic">
+                        <source srcset='./img/catalog-pic-4.webp' type='image/webp'>
+                        <source srcset='./img/catalog-pic-4.jpg' type='image/jpeg'>
+                        <img src='./img/catalog-pic-4.jpg' alt=''>
+                      </picture>
+                      <div class="cart__content">
+                        <div class="cart__details">
+                          <div class="cart__id">К090117</div>
+                          <div class="cart__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
+                        </div>
+                        <div class="cart__price">
+                          <div class="cart__mini-title">Цена за м</div>
+                          <div>3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
+                          <div class="cart__mini-title">1 упаковка = 3.41 м<sup>2</sup></div>
+                        </div>
+                        <div class="cart__count">
+                          <div class="cart__mini-title">Упаковок</div>
+                          <div class="count"> 
+                            <div class="count">
+                              <span class="count__btn count__minus js-count-input-minus"></span>
+                              <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                              <span class="count__btn count__plus js-count-input-plus"></span>
+                            </div>
+                          </div>
+                          <div class="cart__mini-title">1 упаковка = 5 327.77 ₽</div>
+                        </div>
+                        <div class="cart__price cart__price--summ">
+                          <div class="cart__mini-title">Сумма</div>
+                          <div>3 500 <span class="b-ruble-font">Р</span></div>
+                        </div>
+                      </div>
+                      <div class="cart__delete"><button class="b-button b-button--clear">Удалить</button></div>
+                    </div>
+                    <!--  -->
+                  </div>
+                  <div class="cart__line">
+                    <a href="#" class="b-button b-button--clear b-button--icon-back">Назад к покупкам</a>
+                    <div class="cart__total">
+                      <div class="cart__mini-title">Итого</div>
+                      <div class="cart__price cart__price--summ">3 500 <span class="b-ruble-font">Р</span></div>
+                    </div>
+                  </div>
+                </div>
+                <h2>Оформление заказа</h2>
+                <form class="form">
+                  <div class="form__group">
+                    <div class="form__group-title"><span>Контактные данные</span><ins></ins></div>
+                    <div class="form__items">
+                      <div class="form__item form__item--label form__item--third">
+                        <input type="text" placeholder="placeholder" required>
+                        <label for="">Контактное лицо *</label>
+                      </div>
+                      <div class="form__item form__item--label form__item--third">
+                        <input type="tel" placeholder="placeholder" required>
+                        <label for="">Телефон для связи *</label>
+                      </div>
+                      <div class="form__item form__item--label form__item--third">
+                        <input type="email" placeholder="placeholder" required>
+                        <label for="">Адрес электронной почты *</label>
+                      </div>
+                      <div class="form__item form__item--label form__item--third">
+                        <input type="text" placeholder="placeholder" required>
+                        <label for="">Населенный пункт * </label>
+                      </div>
+                      <div class="form__item form__item--label form__item--third">
+                        <input type="text" placeholder="placeholder" required>
+                        <label for="">Улица * </label>
+                      </div>
+                      <div class="form__item form__item--group form__item--third">
+                        <div class="form__item form__item--label">
+                          <input type="text" placeholder="Улица * " required>
+                          <label for="">Дом * </label>
+                        </div>
+                        <div class="form__item form__item--label">
+                          <input type="text" placeholder="Улица * " required>
+                          <label for="">Кв. / Офис *</label>
+                        </div>
+                        <div class="form__item form__item--label">
+                          <input type="text" placeholder="Улица * " required>
+                          <label for="">Индекс *</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="form__group">
+                    <div class="form__group-title"><span>Способ доставки</span><ins></ins></div>
+                    <div class="form__items">
+                      <div class="form__item form__item--half">
+                        <div class="radio">
+                          <input type="radio" name="form-deliv" id="form-radio-1-1">
+                          <label class="radio__btn" for="form-radio-1-1"></label>
+                          <label class="radio__title" for="form-radio-1-1">Самовывоз (бесплатно)</label>
+                        </div>
+                      </div>
+                      <div class="form__item form__item--half">
+                        <div class="radio">
+                          <input type="radio" name="form-deliv" id="form-radio-1-2">
+                          <label class="radio__btn" for="form-radio-1-2"></label>
+                          <label class="radio__title" for="form-radio-1-2">Доставка по области (30 р/км)</label>
+                        </div>
+                      </div>
+                      <div class="form__item form__item--half">
+                        <div class="radio">
+                          <input type="radio" name="form-deliv" id="form-radio-1-3">
+                          <label class="radio__btn" for="form-radio-1-3"></label>
+                          <label class="radio__title" for="form-radio-1-3">Доставка по городу (500 <span class="b-ruble-font">Р</span>)</label>
+                        </div>
+                      </div>
+                      <div class="form__item form__item--half">
+                        <div class="radio">
+                          <input type="radio" name="form-deliv" id="form-radio-1-4">
+                          <label class="radio__btn" for="form-radio-1-4"></label>
+                          <label class="radio__title" for="form-radio-1-4">Доставка по регионам РФ до транспортной компании (бесплатно)</label>
+                        </div>
+                        <div class="form__info">+ по тарифу транспортной компании до вашего города</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="form__group">
+                    <div class="form__group-title"><span>Способ оплаты </span><ins></ins></div>
+                    <div class="form__items">
+                      <div class="form__item form__item--half">
+                        <div class="radio">
+                          <input type="radio" name="form-pay" id="form-radio-2-1">
+                          <label class="radio__btn" for="form-radio-2-1"></label>
+                          <label class="radio__title" for="form-radio-2-1">Оплата онлайн картами VISA, MASTERCARD</label>
+                        </div>
+                      </div>
+                      <div class="form__item form__item--half">
+                        <div class="radio">
+                          <input type="radio" name="form-pay" id="form-radio-2-2">
+                          <label class="radio__btn" for="form-radio-2-2"></label>
+                          <label class="radio__title" for="form-radio-2-2">Безналичный расчет</label>
+                        </div>
+                      </div>
+                      <div class="form__item form__item--half">
+                        <div class="radio">
+                          <input type="radio" name="form-pay" id="form-radio-2-3">
+                          <label class="radio__btn" for="form-radio-2-3"></label>
+                          <label class="radio__title" for="form-radio-2-3">Наличными при получении</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="form__group">
+                    <div class="form__group-title"><span>Дополнительные пожелания</span><ins></ins></div>
+                    <div class="form__items">
+                      <div class="form__item form__item--label">
+                        <textarea placeholder="placeholder" required></textarea>
+                        <label for="">Ваш комментарий * </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__footer">
+                    <div class="checkbox">
+                      <input type="checkbox" name="policy" id="policy">
+                      <label class="checkbox__btn" for="policy"></label>
+                      <label class="checkbox__title" for="policy">Я согласен с условиями <a href="#">лицензионного соглашения</a> *</label>
+                    </div>
+                    <div class="form__footer-btn">
+                      <button class="b-button b-button--blue b-button--wide">Оформить заказ</button>
+                    </div>
+                  </div>
+                </form>
             </div>
-            <div class="news news-detail">
-              <div class="news-detail__inner">
-                <div class="news__date">11 августа по 15 сентября </div>
-                <h1>Отличные скидки на кварцвиниловую плитку Alpinext</h1>
-                <div class="news-detail__gallery">
-                  <div class="swiper-container swiper-container-gallery">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <picture>
-                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
-                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
-                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
-                        </picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture>
-                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
-                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
-                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
-                        </picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture>
-                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
-                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
-                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
-                        </picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture>
-                          <source srcset='./img/news-detail-pic.webp' type='image/webp'>
-                          <source srcset='./img/news-detail-pic.jpg' type='image/jpeg'>
-                          <img src='./img/news-detail-pic.jpg' alt='Отличные скидки на кварцвиниловую плитку Alpinext'>
-                        </picture>
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                  </div>
-                </div>
-                <div class="news-detail__content content">
-                  <h2>О проекте</h2>
-                  <p>У нас в гостях архитектор, дизайнер, эксперт в проектировании коммерческих помещений, профессионал своего дела и приятный собеседник - Екатерина Никулина!</p>
-                  <p>Екатерина рассказала, в чем особенность дизайна коммерческих помещений, существуют ли особые требования, что должен знать заказчик, обращаясь к дизайнеру, и с чего начать воплощение вашей идеи по открытию заведения.</p>
-                  <p>Приятного просмотра!</p>
-                  <ul>
-                    <li>Невероятная прочность – 43 класс износостойкости по достоинству оценят владельцы коммерческих площадей;</li>
-                    <li>Долговечность – плитка из этих коллекций славится долгим сроком службы;</li>
-                    <li>Быстрый монтаж – замковый тип соединения позволяет укладывать декор без клея и подложки;</li>
-                    <li>Простота ухода – в отличие от натурального дерева, кварцвиниловый ламинат легко моется.</li>
-                    <li>Напольные покрытия Alpinext – достойная альтернатива деревянным полам, не требующая особых хлопот в обслуживании. </li>
-                    <li>Водостойкая кварцвиниловая плитка экологична, износоустойчива, ударопрочна и термостабильна. Имеет антистатичные и противоскользящие свойства.</li>
-                    <li>Многообразие дизайнов под дерево и камень подойдет для интерьеров всех стилей, и прекрасно будет смотреться в самых различных liпомещениях: дома, в гостиницах, офисах, а также в детских учреждениях, спортивных залах и больницах.</li>
-                  </ul>
-                </div>
-                <div class="news-detail__goods"> 
-                  <div class="catalog catalog--goods">
-                    <div class="catalog__items">
-                      <div class="catalog__item">
-                        <div class="catalog__inner">
-                          <div class="catalog__pic">
-                            <a href="#">
-                              <picture>
-                                <source srcset='./img/catalog-pic-1.webp' type='image/webp'>
-                                <source srcset='./img/catalog-pic-1.jpg' type='image/jpeg'>
-                                <img src='./img/catalog-pic-1.jpg' alt=''>
-                              </picture>
-                            </a>
-                          </div>
-                          <div class="catalog__content">
-                            <div class="catalog__id">К090117</div>
-                            <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                            <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="catalog__item">
-                        <div class="catalog__inner">
-                          <div class="catalog__pic">
-                            <a href="#">
-                              <picture>
-                                <source srcset='./img/catalog-pic-2.webp' type='image/webp'>
-                                <source srcset='./img/catalog-pic-2.jpg' type='image/jpeg'>
-                                <img src='./img/catalog-pic-2.jpg' alt=''>
-                              </picture>
-                            </a>
-                          </div>
-                          <div class="catalog__content">
-                            <div class="catalog__id">К090117</div>
-                            <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                            <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="content__wrap">
-                <div class="catalog catalog--carousel carousel">
-                  <h2>Товары по акции</h2>
-                  <div class="catalog__carousel">
-                    <div class="swiper-container swiper-container-carousel">
-                      <div class="swiper-wrapper">
-                        <!--  -->
-                        <div class="swiper-slide">
-                          <div class="catalog__item">
-                            <div class="catalog__pic">
-                              <a href="#">
-                                <picture>
-                                  <source srcset='./img/catalog-pic-1.webp' type='image/webp'>
-                                  <source srcset='./img/catalog-pic-1.jpg' type='image/jpeg'>
-                                  <img src='./img/catalog-pic-1.jpg' alt='Инженерная доска Arti Parchetto Italian Дуб Bianco'>
-                                </picture>
-                              </a>
-                              <div class="catalog__overlay">
-                                <ul>
-                                  <li>Коллекция: <span>Wood Bee</span></li>
-                                  <li>Покрытие: <span>Лак</span></li>
-                                  <li>Порода дерева: <span>Ясень</span></li>
-                                  <li>Длина: <span>1200 мм</span></li>
-                                  <li>Ширина: <span>125 мм</span></li>
-                                  <li>Толщина: <span>12 мм</span></li>
-                                </ul>
-                                <div class="catalog__btn">
-                                  <a class="b-button b-button--blue b-button--wide" href="#">Добавить в корзину</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="catalog__content">
-                              <div class="catalog__id">К090117</div>
-                              <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                              <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--  -->
-                        <div class="swiper-slide">
-                          <div class="catalog__item">
-                            <div class="catalog__pic">
-                              <a href="#">
-                                <picture>
-                                  <source srcset='./img/catalog-pic-2.webp' type='image/webp'>
-                                  <source srcset='./img/catalog-pic-2.jpg' type='image/jpeg'>
-                                  <img src='./img/catalog-pic-2.jpg' alt='Инженерная доска Arti Parchetto Italian Дуб Bianco'>
-                                </picture>
-                              </a>
-                              <div class="catalog__overlay">
-                                <ul>
-                                  <li>Коллекция: <span>Wood Bee</span></li>
-                                  <li>Покрытие: <span>Лак</span></li>
-                                  <li>Порода дерева: <span>Ясень</span></li>
-                                  <li>Длина: <span>1200 мм</span></li>
-                                  <li>Ширина: <span>125 мм</span></li>
-                                  <li>Толщина: <span>12 мм</span></li>
-                                </ul>
-                                <div class="catalog__btn">
-                                  <a class="b-button b-button--blue b-button--wide" href="#">Добавить в корзину</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="catalog__content">
-                              <div class="catalog__id">К090117</div>
-                              <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                              <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--  -->
-                        <div class="swiper-slide">
-                          <div class="catalog__item">
-                            <div class="catalog__pic">
-                              <a href="#">
-                                <picture>
-                                  <source srcset='./img/catalog-pic-3.webp' type='image/webp'>
-                                  <source srcset='./img/catalog-pic-3.jpg' type='image/jpeg'>
-                                  <img src='./img/catalog-pic-3.jpg' alt='Инженерная доска Arti Parchetto Italian Дуб Bianco'>
-                                </picture>
-                              </a>
-                              <div class="catalog__overlay">
-                                <ul>
-                                  <li>Коллекция: <span>Wood Bee</span></li>
-                                  <li>Покрытие: <span>Лак</span></li>
-                                  <li>Порода дерева: <span>Ясень</span></li>
-                                  <li>Длина: <span>1200 мм</span></li>
-                                  <li>Ширина: <span>125 мм</span></li>
-                                  <li>Толщина: <span>12 мм</span></li>
-                                </ul>
-                                <div class="catalog__btn">
-                                  <a class="b-button b-button--blue b-button--wide" href="#">Добавить в корзину</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="catalog__content">
-                              <div class="catalog__id">К090117</div>
-                              <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                              <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--  -->
-                        <div class="swiper-slide">
-                          <div class="catalog__item">
-                            <div class="catalog__pic">
-                              <a href="#">
-                                <picture>
-                                  <source srcset='./img/catalog-pic-4.webp' type='image/webp'>
-                                  <source srcset='./img/catalog-pic-4.jpg' type='image/jpeg'>
-                                  <img src='./img/catalog-pic-4.jpg' alt='Инженерная доска Arti Parchetto Italian Дуб Bianco'>
-                                </picture>
-                              </a>
-                              <div class="catalog__overlay">
-                                <ul>
-                                  <li>Коллекция: <span>Wood Bee</span></li>
-                                  <li>Покрытие: <span>Лак</span></li>
-                                  <li>Порода дерева: <span>Ясень</span></li>
-                                  <li>Длина: <span>1200 мм</span></li>
-                                  <li>Ширина: <span>125 мм</span></li>
-                                  <li>Толщина: <span>12 мм</span></li>
-                                </ul>
-                                <div class="catalog__btn">
-                                  <a class="b-button b-button--blue b-button--wide" href="#">Добавить в корзину</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="catalog__content">
-                              <div class="catalog__id">К090117</div>
-                              <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                              <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--  -->
-                        <div class="swiper-slide">
-                          <div class="catalog__item">
-                            <div class="catalog__pic">
-                              <a href="#">
-                                <picture>
-                                  <source srcset='./img/catalog-pic-5.webp' type='image/webp'>
-                                  <source srcset='./img/catalog-pic-5.jpg' type='image/jpeg'>
-                                  <img src='./img/catalog-pic-5.jpg' alt='Инженерная доска Arti Parchetto Italian Дуб Bianco'>
-                                </picture>
-                              </a>
-                              <div class="catalog__overlay">
-                                <ul>
-                                  <li>Коллекция: <span>Wood Bee</span></li>
-                                  <li>Покрытие: <span>Лак</span></li>
-                                  <li>Порода дерева: <span>Ясень</span></li>
-                                  <li>Длина: <span>1200 мм</span></li>
-                                  <li>Ширина: <span>125 мм</span></li>
-                                  <li>Толщина: <span>12 мм</span></li>
-                                </ul>
-                                <div class="catalog__btn">
-                                  <a class="b-button b-button--blue b-button--wide" href="#">Добавить в корзину</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="catalog__content">
-                              <div class="catalog__id">К090117</div>
-                              <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                              <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--  -->
-                        <div class="swiper-slide">
-                          <div class="catalog__item">
-                            <div class="catalog__pic">
-                              <a href="#">
-                                <picture>
-                                  <source srcset='./img/catalog-pic-6.webp' type='image/webp'>
-                                  <source srcset='./img/catalog-pic-6.jpg' type='image/jpeg'>
-                                  <img src='./img/catalog-pic-6.jpg' alt='Инженерная доска Arti Parchetto Italian Дуб Bianco'>
-                                </picture>
-                              </a>
-                              <div class="catalog__overlay">
-                                <ul>
-                                  <li>Коллекция: <span>Wood Bee</span></li>
-                                  <li>Покрытие: <span>Лак</span></li>
-                                  <li>Порода дерева: <span>Ясень</span></li>
-                                  <li>Длина: <span>1200 мм</span></li>
-                                  <li>Ширина: <span>125 мм</span></li>
-                                  <li>Толщина: <span>12 мм</span></li>
-                                </ul>
-                                <div class="catalog__btn">
-                                  <a class="b-button b-button--blue b-button--wide" href="#">Добавить в корзину</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="catalog__content">
-                              <div class="catalog__id">К090117</div>
-                              <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                              <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--  -->
-                        <div class="swiper-slide">
-                          <div class="catalog__item">
-                            <div class="catalog__pic">
-                              <a href="#">
-                                <picture>
-                                  <source srcset='./img/catalog-pic-7.webp' type='image/webp'>
-                                  <source srcset='./img/catalog-pic-7.jpg' type='image/jpeg'>
-                                  <img src='./img/catalog-pic-7.jpg' alt='Инженерная доска Arti Parchetto Italian Дуб Bianco'>
-                                </picture>
-                              </a>
-                              <div class="catalog__overlay">
-                                <ul>
-                                  <li>Коллекция: <span>Wood Bee</span></li>
-                                  <li>Покрытие: <span>Лак</span></li>
-                                  <li>Порода дерева: <span>Ясень</span></li>
-                                  <li>Длина: <span>1200 мм</span></li>
-                                  <li>Ширина: <span>125 мм</span></li>
-                                  <li>Толщина: <span>12 мм</span></li>
-                                </ul>
-                                <div class="catalog__btn">
-                                  <a class="b-button b-button--blue b-button--wide" href="#">Добавить в корзину</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="catalog__content">
-                              <div class="catalog__id">К090117</div>
-                              <div class="catalog__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                              <div class="catalog__price">3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--  -->
-                      </div>
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-scrollbar"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
         </section>
         
         <section class="l-footer">
