@@ -131,7 +131,7 @@ button.b-button {
   &--gray {
     background-color: $color-lightgray;
     color: $color-font-dark;
-    
+
     &:hover {
       background-color: $color-lightgray;
       color: $color-lightblue;
@@ -149,7 +149,7 @@ button.b-button {
       background-color: $color-lightgray;
       color: $color-lightgray3;
       cursor: default;
-      
+
       &:hover {
         background-color: $color-lightgray;
         color: $color-lightgray3;
@@ -317,6 +317,12 @@ button.b-button {
 /*----------*/
 .fancybox__backdrop {
   background: $color-blue-a;
+}
+/*----------*/
+.carousel *,
+.carousel *:before,
+.carousel *:after {
+  box-sizing: border-box;
 }
 /*----------*/
 @media (max-width: calc(#{$breakpoint-tablet} - 1px)) {
