@@ -1,0 +1,100 @@
+.contacts {
+  display: flex;
+  flex-flow: row wrap;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-left: -8.5rem;
+    margin-right: -8.5rem;
+  }
+
+  &__col {
+    padding-top: 4rem;
+    margin-top: 4rem;
+    width: 100%;
+    border-top: 1px solid $color-lightgray2;
+
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: 0 8.5rem;
+      margin-top: 0;
+      border-top: none;
+      border-left: 1px solid $color-lightgray2;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+
+    &--left {
+      @media (min-width: $breakpoint-desktop) {
+        width: 60%;
+      }
+    }
+    &--right {
+      display: flex;
+      flex-flow: column nowrap;
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 40%;
+      }
+    }
+  }
+
+  &__map {
+    margin-bottom: 4rem;
+    min-height: 28rem;
+    position: relative;
+    flex: 1 auto;
+
+    @media (min-width: $breakpoint-tablet) {
+      min-height: 50rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      min-height: 60rem;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__items {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &__item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    width: 100%;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+    
+    @media (min-width: $breakpoint-desktop) {
+      padding-bottom: 0;
+      width: 33.33%;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}
