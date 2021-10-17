@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПолГорода - Напольные покрытия - Корзина</title>
+    <title>ПолГорода - Напольные покрытия - Контакты</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -243,216 +243,60 @@
                   <a href="#">Каталог</a>
                   <span>Паркетная доска</span>
                 </nav>
-                <div class="cart">
-                  <div class="cart__header">
-                    <h1>Корзина</h1>
-                    <button class="b-button b-button--clear b-button--icon-basket cart__header-btn">Очистить козрину</button>
-                  </div>
-                  <div class="cart__items">
-                    <!--  -->
-                    <div class="cart__item">
-                      <picture class="cart__pic">
-                        <source srcset='./img/catalog-pic-1.webp' type='image/webp'>
-                        <source srcset='./img/catalog-pic-1.jpg' type='image/jpeg'>
-                        <img src='./img/catalog-pic-1.jpg' alt=''>
-                      </picture>
-                      <div class="cart__content">
-                        <div class="cart__details">
-                          <div class="cart__id">К090117</div>
-                          <div class="cart__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                        </div>
-                        <div class="cart__price">
-                          <div class="cart__mini-title">Цена за м</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                          <div class="cart__mini-title">1 упаковка = 3.41 м<sup>2</sup></div>
-                        </div>
-                        <div class="cart__count">
-                          <div class="cart__mini-title">Упаковок</div>
-                          <div class="count"> 
-                            <div class="count">
-                              <span class="count__btn count__minus js-count-input-minus"></span>
-                              <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-                              <span class="count__btn count__plus js-count-input-plus"></span>
-                            </div>
-                          </div>
-                          <div class="cart__mini-title">1 упаковка = 5 327.77 ₽</div>
-                        </div>
-                        <div class="cart__price cart__price--summ">
-                          <div class="cart__mini-title">Сумма</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span></div>
-                        </div>
-                      </div>
-                      <div class="cart__delete"><button class="b-button b-button--clear">Удалить</button></div>
+                <h1>Контактная информация</h1>
+                <div class="contacts">
+                  <div class="contacts__col contacts__col--left">
+                    <div class="contacts__map">
+                      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7baca99efc99d1fd75fe144a6e987940122730b3b3b45d374dd4d386124be6a&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
                     </div>
-                    <!--  -->
-                    <div class="cart__item">
-                      <picture class="cart__pic">
-                        <source srcset='./img/catalog-pic-4.webp' type='image/webp'>
-                        <source srcset='./img/catalog-pic-4.jpg' type='image/jpeg'>
-                        <img src='./img/catalog-pic-4.jpg' alt=''>
-                      </picture>
-                      <div class="cart__content">
-                        <div class="cart__details">
-                          <div class="cart__id">К090117</div>
-                          <div class="cart__title"><a href="#">Инженерная доска Arti Parchetto Italian Дуб Bianco</a></div>
-                        </div>
-                        <div class="cart__price">
-                          <div class="cart__mini-title">Цена за м</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span>/м<sup>2</sup></div>
-                          <div class="cart__mini-title">1 упаковка = 3.41 м<sup>2</sup></div>
-                        </div>
-                        <div class="cart__count">
-                          <div class="cart__mini-title">Упаковок</div>
-                          <div class="count"> 
-                            <div class="count">
-                              <span class="count__btn count__minus js-count-input-minus"></span>
-                              <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-                              <span class="count__btn count__plus js-count-input-plus"></span>
-                            </div>
-                          </div>
-                          <div class="cart__mini-title">1 упаковка = 5 327.77 ₽</div>
-                        </div>
-                        <div class="cart__price cart__price--summ">
-                          <div class="cart__mini-title">Сумма</div>
-                          <div>3 500 <span class="b-ruble-font">Р</span></div>
-                        </div>
+                    <div class="contacts__items">
+                      <div class="contacts__item">
+                        <p><strong>Контактные данные</strong></p>
+                        <p>Санкт-Петербург, ул. Савушкина, д.119, к. 3, эт. 1, ТЦ «Villa»</p>
                       </div>
-                      <div class="cart__delete"><button class="b-button b-button--clear">Удалить</button></div>
+                      <div class="contacts__item">
+                        <p><strong>Телефон</strong></p>
+                        <p><a href="tel:+88125651507">8 (812) 565-15-07</a></p>
+                      </div>
+                      <div class="contacts__item">
+                        <p><strong>Электроная почта</strong></p>
+                        <p><a href="mailto:info@polgoroda.ru">info@polgoroda.ru</a></p>
+                      </div>
                     </div>
-                    <!--  -->
                   </div>
-                  <div class="cart__line">
-                    <a href="#" class="b-button b-button--clear b-button--icon-back">Назад к покупкам</a>
-                    <div class="cart__total">
-                      <div class="cart__mini-title">Итого</div>
-                      <div class="cart__price cart__price--summ">3 500 <span class="b-ruble-font">Р</span></div>
+                  <div class="contacts__col contacts__col--right"> 
+                    <div class="contacts__form">
+                      <div class="content">
+                        <h2>Остались вопросы?</h2>
+                        <p>Оставьте заявку и наш менеджер перезвонит вам</p>
+                      </div>
+                      <form class="form">
+                        <div class="form__items">
+                          <div class="form__item form__item--label">
+                            <input type="text" placeholder="Ваше имя * " required>
+                            <label for="">Ваше имя * </label>
+                          </div>
+                          <div class="form__item form__item--label">
+                            <input type="tel" placeholder="Телефон для связи * " required>
+                            <label for="">Телефон для связи * </label>
+                          </div>
+                          <div class="form__item form__item--label">
+                            <input type="email" placeholder="Адрес электронной почты *" required>
+                            <label for="">Адрес электронной почты *</label>
+                          </div>
+                          <div class="form__item form__item--label">
+                            <textarea  placeholder="Ваш комментарий к заявке * " required></textarea>
+                            <label for="">Ваш комментарий к заявке * </label>
+                          </div>
+                          <div class="form__item form__item--center">
+                            <button type="submit" class="b-button b-button--blue b-button--big">Оставить заявку</button>
+                          </div>
+                        </div>
+                      
+                      </form>
                     </div>
                   </div>
                 </div>
-                <h2>Оформление заказа</h2>
-                <form class="form">
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Контактные данные</span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="text" placeholder="placeholder" required>
-                        <label for="">Контактное лицо *</label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="tel" placeholder="placeholder" required>
-                        <label for="">Телефон для связи *</label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="email" placeholder="placeholder" required>
-                        <label for="">Адрес электронной почты *</label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="text" placeholder="placeholder" required>
-                        <label for="">Населенный пункт * </label>
-                      </div>
-                      <div class="form__item form__item--label form__item--third">
-                        <input type="text" placeholder="placeholder" required>
-                        <label for="">Улица * </label>
-                      </div>
-                      <div class="form__item form__item--group form__item--third">
-                        <div class="form__item form__item--label">
-                          <input type="text" placeholder="Улица * " required>
-                          <label for="">Дом * </label>
-                        </div>
-                        <div class="form__item form__item--label">
-                          <input type="text" placeholder="Улица * " required>
-                          <label for="">Кв. / Офис *</label>
-                        </div>
-                        <div class="form__item form__item--label">
-                          <input type="text" placeholder="Улица * " required>
-                          <label for="">Индекс *</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Способ доставки</span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-1">
-                          <label class="radio__btn" for="form-radio-1-1"></label>
-                          <label class="radio__title" for="form-radio-1-1">Самовывоз (бесплатно)</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-2">
-                          <label class="radio__btn" for="form-radio-1-2"></label>
-                          <label class="radio__title" for="form-radio-1-2">Доставка по области (30 р/км)</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-3">
-                          <label class="radio__btn" for="form-radio-1-3"></label>
-                          <label class="radio__title" for="form-radio-1-3">Доставка по городу (500 <span class="b-ruble-font">Р</span>)</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-deliv" id="form-radio-1-4">
-                          <label class="radio__btn" for="form-radio-1-4"></label>
-                          <label class="radio__title" for="form-radio-1-4">Доставка по регионам РФ до транспортной компании (бесплатно)</label>
-                        </div>
-                        <div class="form__info">+ по тарифу транспортной компании до вашего города</div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Способ оплаты </span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-pay" id="form-radio-2-1">
-                          <label class="radio__btn" for="form-radio-2-1"></label>
-                          <label class="radio__title" for="form-radio-2-1">Оплата онлайн картами VISA, MASTERCARD</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-pay" id="form-radio-2-2">
-                          <label class="radio__btn" for="form-radio-2-2"></label>
-                          <label class="radio__title" for="form-radio-2-2">Безналичный расчет</label>
-                        </div>
-                      </div>
-                      <div class="form__item form__item--half">
-                        <div class="radio">
-                          <input type="radio" name="form-pay" id="form-radio-2-3">
-                          <label class="radio__btn" for="form-radio-2-3"></label>
-                          <label class="radio__title" for="form-radio-2-3">Наличными при получении</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                  <div class="form__group">
-                    <div class="form__group-title"><span>Дополнительные пожелания</span><ins></ins></div>
-                    <div class="form__items">
-                      <div class="form__item form__item--label">
-                        <textarea placeholder="placeholder" required></textarea>
-                        <label for="">Ваш комментарий * </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__footer">
-                    <div class="checkbox">
-                      <input type="checkbox" name="policy" id="policy">
-                      <label class="checkbox__btn" for="policy"></label>
-                      <label class="checkbox__title" for="policy">Я согласен с условиями <a href="#">лицензионного соглашения</a> *</label>
-                    </div>
-                    <div class="form__footer-btn">
-                      <button class="b-button b-button--blue b-button--wide">Оформить заказ</button>
-                    </div>
-                  </div>
-                </form>
             </div>
         </section>
         
@@ -679,6 +523,373 @@
           </div>
         </div>
         <div class="sidebar-bg js-sidebar-bg"></div>
+        <div class="sidebar sidebar--filter js-sidebar-filter">
+          <div class="sidebar__inner">
+            <div class="sidebar__header">
+              Фильтр
+              <span class="js-sidebar-filter-hide"><img src="./img/icon-times.svg" alt=""></span>
+            </div>
+            <div class="sidebar__filter">
+              <div class="filter filter--sidebar">
+                <div class="filter__items">
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Сортировать</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- Чекбоксы -->
+                        <ul>
+                          <li>
+                            <div class="radio">
+                              <input type="radio" name="filter-radio" id="filter-radio-2-1">
+                              <label class="radio__btn" for="filter-radio-2-1"></label>
+                              <label class="radio__title" for="filter-radio-2-1">По умолчанию</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="radio">
+                              <input type="radio" name="filter-radio" id="filter-radio-2-2">
+                              <label class="radio__btn" for="filter-radio-2-2"></label>
+                              <label class="radio__title" for="filter-radio-2-2">По уменьшению цены</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="radio">
+                              <input type="radio" name="filter-radio" id="filter-radio-2-3">
+                              <label class="radio__btn" for="filter-radio-2-3"></label>
+                              <label class="radio__title" for="filter-radio-2-3">По возрастанию цены</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Цена</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- range -->
+                        <div class="filter__range range js-range" data-min="100" data-max='10000' data-step='100'>
+                          <input type="text" class="js-range-min"><span>&mdash;</span><input type="text" class="js-range-max">
+                          <div class="range__slider">
+                            <div class="js-range-slider"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Коллекция</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- Чекбоксы -->
+                        <ul>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-5" id="filter-2-5">
+                              <label class="checkbox__btn" for="filter-2-5"></label>
+                              <label class="checkbox__title" for="filter-2-5">Коллекция</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-6" id="filter-2-6">
+                              <label class="checkbox__btn" for="filter-2-6"></label>
+                              <label class="checkbox__title" for="filter-2-6">Коллекция</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-7" id="filter-2-7">
+                              <label class="checkbox__btn" for="filter-2-7"></label>
+                              <label class="checkbox__title" for="filter-2-7">Коллекция</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-8" id="filter-2-8">
+                              <label class="checkbox__btn" for="filter-2-8"></label>
+                              <label class="checkbox__title" for="filter-2-8">Коллекция</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Порода дерева</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- Чекбоксы -->
+                        <ul>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-9" id="filter-2-9">
+                              <label class="checkbox__btn" for="filter-2-9"></label>
+                              <label class="checkbox__title" for="filter-2-9">Дуб</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-10" id="filter-2-10">
+                              <label class="checkbox__btn" for="filter-2-10"></label>
+                              <label class="checkbox__title" for="filter-2-10">Ясень</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-11" id="filter-2-11">
+                              <label class="checkbox__btn" for="filter-2-11"></label>
+                              <label class="checkbox__title" for="filter-2-11">Сосна</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-12" id="filter-2-12">
+                              <label class="checkbox__btn" for="filter-2-12"></label>
+                              <label class="checkbox__title" for="filter-2-12">Клён</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-13" id="filter-2-13">
+                              <label class="checkbox__btn" for="filter-2-13"></label>
+                              <label class="checkbox__title" for="filter-2-13">Орех</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-14" id="filter-2-14">
+                              <label class="checkbox__btn" for="filter-2-14"></label>
+                              <label class="checkbox__title" for="filter-2-14">Вишня</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Дизайн</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- Чекбоксы -->
+                        <ul>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-15" id="filter-2-15">
+                              <label class="checkbox__btn" for="filter-2-15"></label>
+                              <label class="checkbox__title" for="filter-2-15">Дизайн</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-16" id="filter-2-16">
+                              <label class="checkbox__btn" for="filter-2-16"></label>
+                              <label class="checkbox__title" for="filter-2-16">Дизайн</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-17" id="filter-2-17">
+                              <label class="checkbox__btn" for="filter-2-17"></label>
+                              <label class="checkbox__title" for="filter-2-17">Дизайн</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-18" id="filter-2-18">
+                              <label class="checkbox__btn" for="filter-2-18"></label>
+                              <label class="checkbox__title" for="filter-2-18">Дизайн</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-19" id="filter-2-19">
+                              <label class="checkbox__btn" for="filter-2-19"></label>
+                              <label class="checkbox__title" for="filter-2-19">Дизайн</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-20" id="filter-2-20">
+                              <label class="checkbox__btn" for="filter-2-20"></label>
+                              <label class="checkbox__title" for="filter-2-20">Дизайн</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Страна</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- Чекбоксы -->
+                        <ul>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-21" id="filter-2-21">
+                              <label class="checkbox__btn" for="filter-2-21"></label>
+                              <label class="checkbox__title" for="filter-2-21">Страна</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-22" id="filter-2-22">
+                              <label class="checkbox__btn" for="filter-2-22"></label>
+                              <label class="checkbox__title" for="filter-2-22">Страна</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-23" id="filter-2-23">
+                              <label class="checkbox__btn" for="filter-2-23"></label>
+                              <label class="checkbox__title" for="filter-2-23">Страна</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-24" id="filter-2-24">
+                              <label class="checkbox__btn" for="filter-2-24"></label>
+                              <label class="checkbox__title" for="filter-2-24">Страна</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-25" id="filter-2-25">
+                              <label class="checkbox__btn" for="filter-2-25"></label>
+                              <label class="checkbox__title" for="filter-2-25">Страна</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-26" id="filter-2-26">
+                              <label class="checkbox__btn" for="filter-2-26"></label>
+                              <label class="checkbox__title" for="filter-2-26">Страна</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Покрытие</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- Чекбоксы -->
+                        <ul>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-27" id="filter-2-27">
+                              <label class="checkbox__btn" for="filter-2-27"></label>
+                              <label class="checkbox__title" for="filter-2-27">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-28" id="filter-2-28">
+                              <label class="checkbox__btn" for="filter-2-28"></label>
+                              <label class="checkbox__title" for="filter-2-28">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-29" id="filter-2-29">
+                              <label class="checkbox__btn" for="filter-2-29"></label>
+                              <label class="checkbox__title" for="filter-2-29">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-30" id="filter-2-30">
+                              <label class="checkbox__btn" for="filter-2-30"></label>
+                              <label class="checkbox__title" for="filter-2-30">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-31" id="filter-2-31">
+                              <label class="checkbox__btn" for="filter-2-31"></label>
+                              <label class="checkbox__title" for="filter-2-31">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-32" id="filter-2-32">
+                              <label class="checkbox__btn" for="filter-2-32"></label>
+                              <label class="checkbox__title" for="filter-2-32">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-33" id="filter-2-33">
+                              <label class="checkbox__btn" for="filter-2-33"></label>
+                              <label class="checkbox__title" for="filter-2-33">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-34" id="filter-2-34">
+                              <label class="checkbox__btn" for="filter-2-34"></label>
+                              <label class="checkbox__title" for="filter-2-34">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-35" id="filter-2-35">
+                              <label class="checkbox__btn" for="filter-2-35"></label>
+                              <label class="checkbox__title" for="filter-2-35">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-36" id="filter-2-36">
+                              <label class="checkbox__btn" for="filter-2-36"></label>
+                              <label class="checkbox__title" for="filter-2-36">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-37" id="filter-2-37">
+                              <label class="checkbox__btn" for="filter-2-37"></label>
+                              <label class="checkbox__title" for="filter-2-37">Покрытие</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="checkbox">
+                              <input type="checkbox" name="filter-2-38" id="filter-2-38">
+                              <label class="checkbox__btn" for="filter-2-38"></label>
+                              <label class="checkbox__title" for="filter-2-38">Покрытие</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <div class="filter__acc">
+                      <span class="js-acc-title active">Толщина, мм</span>
+                      <div class="filter__acc-content js-acc-content">
+                        <!-- range -->
+                        <div class="filter__range range js-range" data-min="1" data-max='24' data-step='1'>
+                          <input type="text" class="js-range-min"><span>&mdash;</span><input type="text" class="js-range-max">
+                          <div class="range__slider">
+                            <div class="js-range-slider"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+              </div>
+            </div>
+            <div class="sidebar__footer">
+              <span class="b-button b-button--clear">Очистить всё</span>
+              <span class="b-button b-button--blue">Применить</span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-bg js-sidebar-filter-bg"></div>
         <div id="form-signin" class="modal">
           <div class="modal__title">
             <span>Вход</span> / <button data-fancybox="signin" data-src="#form-signup">Регистрация</button>
